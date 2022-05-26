@@ -1,0 +1,48 @@
+<section class="container">
+
+  <section class="flex">
+    <!-- datos -->
+    <div class="flex-item-big">
+      <div class="item">
+        <h2>pH</h2>
+        <input type="number" maxlength="2" name="pH" [(ngModel)]='pH' (ngModelChange)="checkPh($event)">
+      </div>
+      <div class="item">
+        <h2>TDS</h2>
+        <input type="number" name="TDS" [(ngModel)]='TDS'>
+      </div>
+      <div class="item">
+        <h2>Turbiedad</h2>
+        <input type="number" name="Turbiedad" [(ngModel)]='Turbiedad' (ngModelChange)="checkTurbiedad($event)" >
+      </div>
+      <div class="item">
+        <h2>Temperatura</h2>
+        <input type="number" name="Temperatura" [(ngModel)]='Temperatura' (ngModelChange)="checkTemperatura($event)">
+      </div>
+    </div>
+    <!-- arte -->
+    <div class="flex-item-big">
+      <div class="seccion-art">
+        <!-- <div class="art" [ngStyle]="{'background-color': Temperatura > 10 ? 'red' : 'blue'}"> -->
+        <div 
+          [@fadeInDownOnEnter]
+          [@fadeOutOnLeave]
+          class="art"
+          [ngStyle]="{
+            'width': (Temperatura * 4 + 10) > 400 ? (400)+'px':(Temperatura * 4 + 10) +'px',
+            'background-color': colorOne_r[pH],
+            'opacity':  (101 - Turbiedad) * 0.01 }">
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ejemplo -->
+  <section class="seccion-on">
+    <div>
+      <h4>ph</h4>
+      <h4>4</h4>
+    </div>
+  </section>
+</section>
