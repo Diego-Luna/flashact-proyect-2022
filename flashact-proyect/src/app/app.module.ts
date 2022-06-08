@@ -7,13 +7,20 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HomeSeccionBigComponent } from './home-seccion-big/home-seccion-big.component';
 import { SeccionArtComponent } from './seccion-art/seccion-art.component';
+import { FooterComponent } from './footer/footer.component';
+import { ItemColaboracionesComponent } from './item-colaboraciones/item-colaboraciones.component';
+import { MenuComponent } from './menu/menu.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HomeSeccionBigComponent,
-    SeccionArtComponent
+    SeccionArtComponent,
+    FooterComponent,
+    ItemColaboracionesComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

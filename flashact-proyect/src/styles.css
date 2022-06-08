@@ -1,4 +1,6 @@
+@import url('https://use.typekit.net/lty7lon.css');
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;500;800&display=swap');
+
 * , body{
   margin: 0;
   padding: 0;
@@ -6,5 +8,5 @@
 
 body{
   font-family: 'Mukta', sans-serif;
+  background-color: black;
 }
-
