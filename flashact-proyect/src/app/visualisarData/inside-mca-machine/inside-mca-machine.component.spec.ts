@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeSeccionBigComponent } from './home-seccion-big.component';
+import { InsideMcaMachineComponent } from './inside-mca-machine.component';
 
-describe('HomeSeccionBigComponent', () => {
-  let component: HomeSeccionBigComponent;
-  let fixture: ComponentFixture<HomeSeccionBigComponent>;
+describe('InsideMcaMachineComponent', () => {
+  let component: InsideMcaMachineComponent;
+  let fixture: ComponentFixture<InsideMcaMachineComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeSeccionBigComponent ]
+      declarations: [ InsideMcaMachineComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeSeccionBigComponent);
+    fixture = TestBed.createComponent(InsideMcaMachineComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

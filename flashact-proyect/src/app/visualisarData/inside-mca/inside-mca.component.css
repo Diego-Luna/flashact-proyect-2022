@@ -1,0 +1,84 @@
+main{
+  width: calc(80vw - 160px);
+  height: calc(80vh - 160px);
+  margin: auto;
+  padding: 80px;
+  background-color: white;
+  border: none;
+  border-radius: 36px;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* botton */
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.to-return{
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+}
+button img{
+  margin-right: 20px;
+}
+
+/* info */
+
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20%;
+  width: 100%;
+}
+.two{
+  width: 48%;
+  height: 100%;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* user */
+.artista-container div{
+  margin-left: 10%;
+}
+
+/* info dispositivo */
+.dispositivo-info{
+  flex-direction: column;
+}
+.dispositivo-info p{
+  width: 60%;
+}
+
+/* arte */
+
+.arte{
+  margin-top: 30px;
+  width: 100%;
+  height: 70%;
+}
+.arte-container{
+  width: 100%;
+  height: 100%;
+}
+.arte-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

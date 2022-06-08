@@ -84,7 +84,7 @@ h3{
 .filtro h3{
   font-family: "Cubano";
   font-size: 3.5rem;
-  width: 60%;
+  width: 80%;
 }
 .text-info{
   font-size: 1.4rem;
@@ -94,7 +94,7 @@ h3{
 .colaboraciones-container{
   width: 80%;
   margin: 10%;
-  height: 100vh;
+  height: 80vh;
 }
 .title-seccion{
   text-align: center;
@@ -106,7 +106,7 @@ h3{
 
 .lista-colaboraciones{
   width: 100%;
-  height: 80%;
+  height: 90%;
   display: flex;
   justify-content: space-between;
 }
@@ -118,8 +118,10 @@ h3{
 }
 
 .proceso-container{
-  width: 400px;
-  height: 400px;
+  width: 23vw;
+  height: 23vw;
+  /* width: 400px;
+  height: 400px; */
   background-color: white;
   border: none;
   border-radius: 40px;
@@ -135,13 +137,39 @@ img{
   height: 100%;
   object-fit: fill;
 }
-/* 
-.filtro{
+
+.filtro-absolute{
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #0000003b;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
-  border-radius: 40px;
-} */
+  /* border-radius: 40px; */
+}
+
+.proseso-data-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pro-title{
+  font-size: 2.3rem;
+}
+.pro-text{
+  font-size: 1.45rem;
+}
+
+.pro-title,
+.pro-text{
+  width: 85%;
+  color: white;
+  text-align: center;
+}

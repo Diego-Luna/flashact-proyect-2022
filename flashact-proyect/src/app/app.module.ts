@@ -5,22 +5,26 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { HomeSeccionBigComponent } from './home-seccion-big/home-seccion-big.component';
-import { SeccionArtComponent } from './seccion-art/seccion-art.component';
 import { FooterComponent } from './footer/footer.component';
 import { ItemColaboracionesComponent } from './item-colaboraciones/item-colaboraciones.component';
 import { MenuComponent } from './menu/menu.component';
+import { VisualizarDatosComponent } from './visualisarData/visualizar-datos/visualizar-datos.component';
+import { ItemMcaComponent } from './visualisarData/item-mca/item-mca.component';
+import { InsideMcaMachineComponent } from './visualisarData/inside-mca-machine/inside-mca-machine.component';
+import { InsideMcaComponent } from './visualisarData/inside-mca/inside-mca.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HomeSeccionBigComponent,
-    SeccionArtComponent,
     FooterComponent,
     ItemColaboracionesComponent,
-    MenuComponent
+    MenuComponent,
+    VisualizarDatosComponent,
+    ItemMcaComponent,
+    InsideMcaMachineComponent,
+    InsideMcaComponent
   ],
   imports: [
     BrowserModule,

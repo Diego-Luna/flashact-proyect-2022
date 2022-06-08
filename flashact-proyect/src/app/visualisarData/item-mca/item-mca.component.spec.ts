@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SeccionArtComponent } from './seccion-art.component';
+import { ItemMcaComponent } from './item-mca.component';
 
-describe('SeccionArtComponent', () => {
-  let component: SeccionArtComponent;
-  let fixture: ComponentFixture<SeccionArtComponent>;
+describe('ItemMcaComponent', () => {
+  let component: ItemMcaComponent;
+  let fixture: ComponentFixture<ItemMcaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SeccionArtComponent ]
+      declarations: [ ItemMcaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SeccionArtComponent);
+    fixture = TestBed.createComponent(ItemMcaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
