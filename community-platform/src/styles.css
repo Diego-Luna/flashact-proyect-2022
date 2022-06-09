@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://use.typekit.net/lty7lon.css');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;500;800&display=swap');
+
+* , body{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Mukta', sans-serif;
+  background-color: black;
+}
+
+.container-mca{
+  padding-left: 8%;
+  padding-right: 8%;
+  width: 84%;
+  height: auto;
+}
