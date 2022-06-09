@@ -1,0 +1,32 @@
+<section class="container-all">
+  <section class="createPost-container">
+    <div class="seccion-blue" >
+      <h2>Comparte tu
+       experiencia</h2>
+    </div>
+    <div class="seccion-form">
+      <form action="">
+       <div class="form-item-small" >
+         <label>Nombre:</label>
+         <input type="text" name="name">
+       </div>
+       <div class="form-item-small">
+         <label>Institución o comunidad:</label>
+         <input type="text" name="institutionORcommunity">
+       </div>
+       <div class="form-item-big">
+         <label>Experiencia: <p>Max. 50 palabras</p></label>
+         <textarea minlength="10" maxlength="200" type="text" name="experience"> </textarea>
+       </div>
+       <div class="form-item-medium">
+         <label>URL de las imágenes:</label> <button>?</button>
+         <input type="text" name="image_URLs">
+       </div>
+       <button class="submit" type="submit">Submit</button>
+      </form>
+      <button class="button-cancel" (click)="cancel.emit()">
+        X
+      </button>
+    </div>
+  </section>
+ </section>

@@ -10,6 +10,9 @@ body{
   font-family: 'Mukta', sans-serif;
   background-color: black;
 }
+button{
+  cursor: pointer;
+}
 
 .container-mca{
   padding-left: 8%;

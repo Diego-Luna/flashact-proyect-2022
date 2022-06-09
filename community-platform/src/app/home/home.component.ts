@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  createPost: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  changeCreatePost(): void {
+    this.createPost = !this.createPost;
+  }
 }

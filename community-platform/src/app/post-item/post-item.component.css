@@ -6,6 +6,7 @@
   border: none;
   border-radius: 40px;
   display: flex;
+  margin-bottom: 11vh;
 }
 
 .img-secction,
@@ -65,4 +66,31 @@ img{
   border: 8px solid white;
   border-radius: 100%;
   display: flex;
+}
+
+/* img secction*/
+.all img{
+  object-fit: none;
+}
+.buttons-container{
+  display: flex;
+  position: absolute;
+  bottom: -2vw;
+  right: -2vw;
+}
+
+button img{
+  object-fit: fill;
+}
+button{
+  background-color: #53A6D8;
+  border: none;
+  width: 8vw;
+  height: 5vw;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.space-right{
+  margin-right: 10px;
 }
