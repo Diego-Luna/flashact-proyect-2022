@@ -23,7 +23,12 @@ h2{
 main{
   width: 100%;
   height: auto;
-  background-image: url(/assets/fondo.svg);
+  /* background-image: url(/assets/fondo.svg); */
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.95)
+   ),
+   url('/assets/fondo.png');
   background-repeat: no-repeat;
   background-size: contain;;
 }
