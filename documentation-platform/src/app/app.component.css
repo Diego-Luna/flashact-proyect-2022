@@ -32,10 +32,14 @@
 
 
 /* seccion  1*/
+.container-all-more,
 .container-all{
   margin-top: 20vh;
   width: 100vw;
   height: 100vh;
+}
+.container-all-more{
+  height: 120vh;
 }
 .seccion-name{
   width: calc(100% - 8vw);
@@ -102,7 +106,7 @@ h3{
   width: 23.5%;
   height: 47%;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .paso-2{
@@ -128,6 +132,11 @@ margin-top: 10px;
 }
 
 /* Electronica */
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .electronica{
   background-color: #53A6D8;
 }
@@ -139,4 +148,157 @@ margin-top: 10px;
   height: calc(85vh - 6vw);
   width: calc(100% - 6vw);
   padding: 3vw;
+}
+
+.seccion-img{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 40%;
+}
+
+.principal-img{
+  width: 50%;
+  height: 100%;
+}
+.selec-imgs{
+  width: 35%;
+  /* width: 25%; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.selec-item-info{
+  width: 50%;
+  margin-left: 8px;
+}
+.selec-item{
+  width: 100%;
+  height: 31%;
+  color: white;
+  display: flex;
+}
+.img-small{
+  height: 100%;
+  width: 50%;
+}
+/* programacion */
+.block-seccion-info{
+  height: calc( 60% - 8vw);
+  width: calc( 100% - 8vw);
+  padding: 4vw;
+  color: white;
+}
+
+.programacion h2{
+  color: white;
+}
+.programacion{
+  background-color: #045C93;
+}
+.button-code{
+  width: 40%;
+  height: 10%;
+  background-color: #045C93;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 56px;
+  margin: auto;
+}
+
+.button-code a{
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+}
+
+.seccion-steps-code div{
+  margin-top: 25px;
+}
+.seccion-steps-code h4{
+  font-size: 3em;
+}
+.seccion-steps-code{
+  height: calc(100% - 40px);
+  width: calc(35% - 40px);
+  padding: 20px;
+}
+.p-code{
+  height: 40% !important;
+}
+
+/* seccion de intalar */
+
+.content-intalar{
+  display: flex;
+  height: calc(85vh - 8vw);
+  width: calc(100% - 8vw);
+  padding: 4vw;
+  justify-content: space-around;
+  justify-items: center;
+}
+
+.white-content {
+  background-color: white;
+}
+.info-seccion-armado{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-seccion-armado,
+.white-principal{
+  width: 48%;
+  height: 100%;
+  color: white;
+}
+
+.info-seccion-armado h4 {
+  text-align: center;
+  font-size: 1.35em;
+}
+.info-seccion-armado h3{
+  font-size: 3em;
+  margin-left: 2vw;
+}
+.info-seccion-armado p{
+  margin-left: 2vw;
+  width: 80%;
+  height: 40%;
+}
+
+.examples{
+  width: 100%;
+}
+
+.ubicacion-list{
+  margin-left: 2vw;
+  width: calc(100% - 2vw);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ubicacion-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-small{
+  width: 9vw;
+  height: 9vw;
+}
+.ubicacion-item p{
+  margin: 0;
+  width: auto;
 }
