@@ -18,13 +18,17 @@ h1{
 
 h2{
   font-size: 3rem;
-  /* font-family: "Cubano", sans-serif; */
   color: white;
 }
 main{
   width: 100%;
   height: auto;
-  background-image: url(/assets/fondo.svg);
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+     ),  
+     url('/assets/fondo.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
