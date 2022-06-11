@@ -1,20 +1,38 @@
 <app-menu></app-menu>
 
-<section class="container etapas-section">
+<section class="container etapas-section" id="menu">
   <div class="etapas-list">
-    <app-big-stage class="etapa-b" [imgUrl]='"./assets/etapas/etapa_1.svg"' [sectionName]='"Etapa 1"' [titleName]='"Calibración sensores"' ></app-big-stage>
-    <app-small-stage class="etapa-s" [imgUrl]='"./assets/etapas/etapa_2.svg"' [sectionName]='"Etapa 2"' [titleName]='"Electronica"' [colorSection]='"white"' [colorbackground]='"#53A6D8"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage>
-    <app-small-stage class="etapa-s" [imgUrl]='"./assets/etapas/etapa_2.svg"' [sectionName]='"Etapa 3"' [titleName]='"Programación"' [colorSection]='"white"' [colorbackground]='"#045C93"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage>
+    <!-- <app-big-stage class="etapa-b" [imgUrl]='"./assets/etapas/etapa_1.svg"' [sectionName]='"Etapa 1"' [titleName]='"Calibración sensores"' ></app-big-stage> -->
+    <!-- <app-small-stage class="etapa-s" [imgUrl]='"./assets/etapas/etapa_2.svg"' [sectionName]='"Etapa 2"' [titleName]='"Electronica"' [colorSection]='"white"' [colorbackground]='"#53A6D8"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage>
+    <app-small-stage class="etapa-s" [imgUrl]='"./assets/etapas/etapa_2.svg"' [sectionName]='"Etapa 3"' [titleName]='"Programación"' [colorSection]='"white"' [colorbackground]='"#045C93"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage> -->
+    <a href="#estapa-1" class="no-a etapa-b">
+      <app-big-stage [imgUrl]='"./assets/etapas/etapa_1.svg"' [sectionName]='"Etapa 1"' [titleName]='"Calibración sensores"' ></app-big-stage>
+    </a>
+    <a href="#estapa-2" class="no-a etapa-s">
+      <app-small-stage class="" [imgUrl]='"./assets/etapas/etapa_2.svg"' [sectionName]='"Etapa 2"' [titleName]='"Electronica"' [colorSection]='"white"' [colorbackground]='"#53A6D8"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage>
+    </a>
+    <a href="#estapa-3" class="no-a etapa-s">
+      <app-small-stage class="" [imgUrl]='"./assets/etapas/etapa_2.svg"' [sectionName]='"Etapa 3"' [titleName]='"Programación"' [colorSection]='"white"' [colorbackground]='"#045C93"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage>
+    </a>
   </div>
   <div class="etapas-list">
-    <app-small-stage class="etapa-s" [imgUrl]='"./assets/etapas/etapa_2.svg"' [sectionName]='"Etapa 4"' [titleName]='"Armado"' [colorSection]='"white"' [colorbackground]='"#53A6D8"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage>
+    <!-- <app-small-stage class="etapa-s" [imgUrl]='"./assets/etapas/etapa_2.svg"' [sectionName]='"Etapa 4"' [titleName]='"Armado"' [colorSection]='"white"' [colorbackground]='"#53A6D8"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage>
     <app-small-stage class="etapa-s" [imgUrl]='"./assets/etapas/etapa_5.svg"' [sectionName]='"Etapa 5"' [titleName]='"Instalar"' [colorSection]='"white"' [colorbackground]='"#045C93"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage>
-    <app-big-stage class="etapa-b" [imgUrl]='"./assets/etapas/etapa_6.svg"' [sectionName]='"Etapa 6"' [titleName]='"Comparte tu experiencia"' [colorSection]='"white"' [colorbackground]='"#222222"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-big-stage>
+    <app-big-stage class="etapa-b" [imgUrl]='"./assets/etapas/etapa_6.svg"' [sectionName]='"Etapa 6"' [titleName]='"Comparte tu experiencia"' [colorSection]='"white"' [colorbackground]='"#222222"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-big-stage> -->
+    <a href="#estapa-4" class="no-a etapa-s">
+      <app-small-stage class="etapa-s" [imgUrl]='"./assets/etapas/etapa_2.svg"' [sectionName]='"Etapa 4"' [titleName]='"Armado"' [colorSection]='"white"' [colorbackground]='"#53A6D8"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage>
+    </a>
+    <a href="#estapa-5" class="no-a etapa-s">
+      <app-small-stage class="etapa-s" [imgUrl]='"./assets/etapas/etapa_5.svg"' [sectionName]='"Etapa 5"' [titleName]='"Instalar"' [colorSection]='"white"' [colorbackground]='"#045C93"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage>
+    </a>
+    <a href="https://comunidad-fact2022.web.app/" class="no-a etapa-b">
+      <app-big-stage class="etapa-b" [imgUrl]='"./assets/etapas/etapa_6.svg"' [sectionName]='"Etapa 6"' [titleName]='"Comparte tu experiencia"' [colorSection]='"white"' [colorbackground]='"#222222"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-big-stage>
+    </a>
   </div>
 </section>
 
 <!-- calibracion sensores -->
-<section class="container-all">
+<section class="container-all" id="estapa-1">
   <div class="seccion-name">
     <h2>Calibración sensores</h2>
   </div>
@@ -39,7 +57,7 @@
 </section>
 
 <!-- seccion - block : Electronica -->
-<section class="container-all">
+<section class="container-all" id="estapa-2">
   <div class="seccion-name electronica">
     <h2>Electronica</h2>
   </div>
@@ -86,9 +104,12 @@
 </section>
 
 <!-- seccion: programacion -->
-<section class="container-all">
+<section class="container-all" id="estapa-3">
   <div class="seccion-name programacion">
     <h2>Programacion</h2>
+    <figure class="seccion-programacion-position rotateZ">
+      <img src="./assets/arduino.svg" alt="">
+    </figure>
   </div>
   <div class="seccion-steps">
     <div class="seccion-steps-info">
@@ -128,9 +149,12 @@
 </section>
 
 <!-- seccion - block : Armado -->
-<section class="container-all">
+<section class="container-all" id="estapa-4">
   <div class="seccion-name electronica">
     <h2>Armado</h2>
+    <figure class="seccion-programacion-position armado-img-secction armado">
+      <img src="./assets/tools.svg" alt="">
+    </figure>
   </div>
   <div class="seccion-steps-block">
     <div class="seccion-img">
@@ -174,8 +198,8 @@
   </div>
 </section>
 
-<!-- seccion -->
-<section class="container-all">
+<!-- seccion de instalar-->
+<section class="container-all" id="estapa-5">
   <div class="seccion-name electronica">
     <h2>Intalar</h2>
   </div>

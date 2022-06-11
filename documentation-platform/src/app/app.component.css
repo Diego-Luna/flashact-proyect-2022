@@ -1,3 +1,6 @@
+.no-a{
+  text-decoration: none;
+}
 .container{
   width: 90vw;
   height: 100vh;
@@ -232,6 +235,18 @@ img{
   height: 40% !important;
 }
 
+.seccion-programacion-position img{
+  object-fit: contain;
+}
+
+.seccion-programacion-position{
+  height: 300px;
+  width: 150px;
+  margin-left: 25px;
+}
+.rotateZ{
+  transform: rotateZ(333deg);
+}
 /* seccion de intalar */
 
 .content-intalar{
@@ -246,6 +261,8 @@ img{
 .white-content {
   background-color: white;
 }
+
+/* armado */
 .info-seccion-armado{
   display: flex;
   flex-direction: column;
@@ -273,7 +290,20 @@ img{
   width: 80%;
   height: 40%;
 }
+.armado{
+  position: relative;
+}
+.armado-img-secction{
+  height: 25vh;
+  width: 25vh;
+}
 
+.armado-img-secction img{
+  position: absolute;
+  bottom: 19px;
+}
+
+/* instalar */
 .examples{
   width: 100%;
 }

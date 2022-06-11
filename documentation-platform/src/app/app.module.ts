@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { SmallStageComponent } from './small-stage/small-stage.component';
 import { BigStageComponent } from './big-stage/big-stage.component';
+import { BackButtonComponent } from './back-button/back-button.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { BigStageComponent } from './big-stage/big-stage.component';
     FooterComponent,
     MenuComponent,
     SmallStageComponent,
-    BigStageComponent
+    BigStageComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule
