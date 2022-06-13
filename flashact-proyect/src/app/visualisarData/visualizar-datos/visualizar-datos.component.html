@@ -15,8 +15,8 @@
   <section class="container-mca lista-container">
     <h2>Dispositivos conectados</h2>
     <div class="lista-items">
-      <app-item-mca></app-item-mca>
-      <app-item-mca routerLink="/visualizedata/view/2" routerLinkActive="active"></app-item-mca>
+      <app-item-mca *ngFor="let sensor of sensores" [sense]="sensor"></app-item-mca>
+      <!-- <app-item-mca routerLink="/visualizedata/view/2" routerLinkActive="active"></app-item-mca> -->
       <button>Mostrar Más</button>
     </div>
   </section>

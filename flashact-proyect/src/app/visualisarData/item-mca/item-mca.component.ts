@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SenseItem } from 'src/app/models/reqres-response';
 
 @Component({
   selector: 'app-item-mca',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item-mca.component.css']
 })
 export class ItemMcaComponent implements OnInit {
+
+  @Input() sense: SenseItem | any;
 
   constructor() { }
 

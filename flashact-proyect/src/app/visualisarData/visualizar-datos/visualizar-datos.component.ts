@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpSensorsService } from 'src/app/http-sensors.service';
+
+// Models
+import { SenseItem } from 'src/app/models/reqres-response';
 
 @Component({
   selector: 'app-visualizar-datos',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VisualizarDatosComponent implements OnInit {
 
-  constructor() { }
+  // public sensores: SenseItem[] = [];
+  public sensores: SenseItem[] | any;
+  // public sensores: any = [];
+
+  constructor(private httpSensorsService: HttpSensorsService) {}
 
   ngOnInit(): void {
+    this.httpSensorsService.getData()
+        .subscribe((resp: SenseItem) => {
+      console.log(resp);
+      this.sensores = resp;
+    });
   }
 
 }

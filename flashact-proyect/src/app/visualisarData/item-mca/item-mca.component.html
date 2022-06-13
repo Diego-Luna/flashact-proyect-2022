@@ -9,14 +9,17 @@
 
     <!-- informacion -->
     <div class="info-container two">
-      <p> <b class="text-black">Nombre :</b> El salto 1</p>
+      <p> <b class="text-black">Nombre :</b> {{sense.name}}</p>
+      <p> <b class="text-black">ubicación :</b> {{sense.position_x}} {{sense.position_y}}</p>
+      <p> <b class="text-black">Institución o comunidad :</b> {{sense.comunity_or_institution}}</p>
+      <!-- <p> <b class="text-black">Nombre :</b> El salto 1</p>
       <p> <b class="text-black">ubicación :</b> 20.510526694027835, -103.17511108674198</p>
-      <p> <b class="text-black">Institución o comunidad :</b> EUR</p>
+      <p> <b class="text-black">Institución o comunidad :</b> EUR</p> -->
     </div>
 
-    <a class="button-container" routerLink="/visualizedata/view/1" routerLinkActive="active">
+    <!-- <a class="button-container" routerLink="/visualizedata/view/1" routerLinkActive="active">
       <img src="./assets/item-mca/botton.svg" alt="botton">
-    </a>
+    </a> -->
   </div>
 
   <!-- sensores -->
@@ -25,7 +28,8 @@
       <div class="sensor">
         <div class="sensor-info">
           <h4>Ph</h4>
-          <h3>316.20</h3>
+          <!-- <h3>316.20</h3> -->
+          <h3>{{sense.ph.value[sense.ph.value.length - 1]}}</h3>
         </div>
         <figure class="grafica">
           <img src="./assets/item-mca/graficas/ph.svg" alt="mapa">
@@ -34,7 +38,7 @@
       <div class="sensor">
         <div class="sensor-info">
           <h4>Tem</h4>
-          <h3>306.20</h3>
+          <h3>{{sense.temperature.value[sense.temperature.value.length - 1]}}</h3>
         </div>
         <figure class="grafica">
           <img src="./assets/item-mca/graficas/tem.svg" alt="mapa">
@@ -43,7 +47,8 @@
       <div class="sensor">
         <div class="sensor-info">
           <h4>Tur</h4>
-          <h3>7670</h3>
+          <!-- <h3>7670</h3> -->
+          <h3>{{sense.turbidity.value[sense.turbidity.value.length - 1]}}</h3>
         </div>
         <figure class="grafica">
           <img src="./assets/item-mca/graficas/tur.svg" alt="mapa">
@@ -52,7 +57,8 @@
       <div class="sensor">
         <div class="sensor-info">
           <h4>TDS</h4>
-          <h3>3137</h3>
+          <!-- <h3>3137</h3> -->
+          <h3>{{sense.tds.value[sense.tds.value.length - 1]}}</h3>
         </div>
         <figure class="grafica">
           <img src="./assets/item-mca/graficas/tds.svg" alt="mapa">
@@ -64,6 +70,11 @@
       <figure class="data-time">
         <img src="./assets/item-mca/graficas/data-time.png" alt="data-time">
       </figure>
+
+      <a class="button-container" routerLink="/visualizedata/view/1" routerLinkActive="active">
+        <img src="./assets/item-mca/botton.svg" alt="botton">
+      </a>
+
     </div>
   </div>
 </div>
