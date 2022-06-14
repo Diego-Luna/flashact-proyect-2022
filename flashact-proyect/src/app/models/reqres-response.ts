@@ -1,16 +1,32 @@
 export interface SenseItem {
-  turbidity:               Data;
-  position_y:              number;
-  comunity_or_institution: string;
-  temperature:             Data;
-  position_x:              number;
+  turbidity:               Ph[];
   name:                    string;
-  ph:                      Data;
-  tds:                     Data;
+  ph:                      Ph[];
+  comunity_or_institution: string;
+  position_y:              number;
+  tds:                     Ph[];
+  position_x:              number;
+  temperature:             Temperature[];
 }
 
-interface Data {
+export interface Ph {
+  series: PhSeries[];
+  name:   string;
+}
+
+export interface PhSeries {
+  value: number;
   name:  string;
-  value: number[];
-  time:  string[];
+  max?:  number;
+  min?:  number;
+}
+
+export interface Temperature {
+  name:   string;
+  series: TemperatureSeries[];
+}
+
+export interface TemperatureSeries {
+  value: number;
+  name:  string;
 }

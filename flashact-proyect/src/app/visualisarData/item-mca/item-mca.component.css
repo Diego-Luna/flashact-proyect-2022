@@ -73,6 +73,10 @@ img{
   display: flex;
   align-items: center;
   justify-content: space-around;
+  cursor: pointer;
+}
+.sensor:hover{
+  box-shadow: 0px 2px 4px #888888;
 }
 .sensor h4{
   text-align: left;
@@ -111,6 +115,7 @@ img{
   margin-top: 10px;
   font-size: 1.2rem;
   color: black;
+  /* color: #a8eac64d; */
   text-align: left;
 }
 .data-time{

@@ -12,24 +12,18 @@
       <p> <b class="text-black">Nombre :</b> {{sense.name}}</p>
       <p> <b class="text-black">ubicación :</b> {{sense.position_x}} {{sense.position_y}}</p>
       <p> <b class="text-black">Institución o comunidad :</b> {{sense.comunity_or_institution}}</p>
-      <!-- <p> <b class="text-black">Nombre :</b> El salto 1</p>
-      <p> <b class="text-black">ubicación :</b> 20.510526694027835, -103.17511108674198</p>
-      <p> <b class="text-black">Institución o comunidad :</b> EUR</p> -->
     </div>
   </div>
 
   <!-- sensores -->
   <div class="item-sensores-container">
     <div class="all-sense">
-      <div class="sensor">
+      <div class="sensor" (click)="changeData(1)">
         <div class="sensor-info">
           <h4>Ph</h4>
-          <!-- <h3>316.20</h3> -->
-          <h3>{{sense.ph.value[sense.ph.value.length - 1]}}</h3>
+          <h3>{{sense.ph[0].series[sense.ph[0].series.length - 1].value}}</h3>
         </div>
         <figure class="grafica" #grafica_small>
-          <!-- <img src="./assets/item-mca/graficas/ph.svg" alt="mapa"> scheme="fire" -->
-          <!-- [view]="small_view" -->
           <ngx-charts-area-chart
             [view]="[grafica_small.offsetWidth, grafica_small.offsetHeight]"
             [scheme]="colorScheme_ph"
@@ -41,18 +35,17 @@
             [xAxisLabel]="small_xAxisLabel"
             [yAxisLabel]="small_yAxisLabel"
             [timeline]="small_timeline"
-            [results]="multi"
+            [results]="sense.ph"
             (select)="onSelect($event)">
           </ngx-charts-area-chart>
         </figure>
       </div>
-      <div class="sensor">
+      <div class="sensor" (click)="changeData(2)">
         <div class="sensor-info">
           <h4>Tem</h4>
-          <h3>{{sense.temperature.value[sense.temperature.value.length - 1]}}</h3>
+          <h3>{{sense.temperature[0].series[sense.temperature[0].series.length - 1].value}}</h3>
         </div>
         <figure class="grafica">
-          <!-- <img src="./assets/item-mca/graficas/tem.svg" alt="mapa"> -->
           <ngx-charts-area-chart
             [view]="[grafica_small.offsetWidth, grafica_small.offsetHeight]"
             [scheme]="colorScheme_tem"
@@ -64,19 +57,17 @@
             [xAxisLabel]="small_xAxisLabel"
             [yAxisLabel]="small_yAxisLabel"
             [timeline]="small_timeline"
-            [results]="multi"
+            [results]="sense.temperature"
             (select)="onSelect($event)">
           </ngx-charts-area-chart>
         </figure>
       </div>
-      <div class="sensor">
+      <div class="sensor" (click)="changeData(3)">
         <div class="sensor-info">
           <h4>Tur</h4>
-          <!-- <h3>7670</h3> -->
-          <h3>{{sense.turbidity.value[sense.turbidity.value.length - 1]}}</h3>
+          <h3>{{sense.turbidity[0].series[sense.turbidity[0].series.length - 1].value}}</h3>
         </div>
         <figure class="grafica">
-          <!-- <img src="./assets/item-mca/graficas/tur.svg" alt="mapa"> -->
           <ngx-charts-area-chart
             [view]="[grafica_small.offsetWidth, grafica_small.offsetHeight]"
             [scheme]="colorScheme_tur"
@@ -88,21 +79,19 @@
             [xAxisLabel]="small_xAxisLabel"
             [yAxisLabel]="small_yAxisLabel"
             [timeline]="small_timeline"
-            [results]="multi"
+            [results]="sense.turbidity"
             (select)="onSelect($event)">
           </ngx-charts-area-chart>
         </figure>
       </div>
-      <div class="sensor">
+      <div class="sensor" (click)="changeData(4)">
         <div class="sensor-info">
           <h4>TDS</h4>
-          <!-- <h3>3137</h3> -->
-          <h3>{{sense.tds.value[sense.tds.value.length - 1]}}</h3>
+          <h3>{{sense.tds[0].series[sense.tds[0].series.length - 1].value}}</h3>
         </div>
         <figure class="grafica">
-          <!-- <img src="./assets/item-mca/graficas/tds.svg" alt="mapa"> -->
           <ngx-charts-area-chart
-          [view]="[grafica_small.offsetWidth, grafica_small.offsetHeight]"
+            [view]="[grafica_small.offsetWidth, grafica_small.offsetHeight]"
             [scheme]="colorScheme_tds"
             [legend]="small_legend"
             [showXAxisLabel]="small_showXAxisLabel"
@@ -112,20 +101,18 @@
             [xAxisLabel]="small_xAxisLabel"
             [yAxisLabel]="small_yAxisLabel"
             [timeline]="small_timeline"
-            [results]="multi"
+            [results]="sense.tds"
             (select)="onSelect($event)">
           </ngx-charts-area-chart>
         </figure>
       </div>
     </div>
     <div class="grafic-sense">
-      <h4>Ph</h4>
       <figure class="data-time" #containerRef>
-        <!-- <img src="./assets/item-mca/graficas/data-time.png" alt="data-time"> -->
-        <!-- [view]="big_view" -->
         <ngx-charts-line-chart
             [view]="[containerRef.offsetWidth, containerRef.offsetHeight]"
             [legend]="big_legend"
+            [scheme]="colorScheme_big"
             [showXAxisLabel]="big_showXAxisLabel"
             [showYAxisLabel]="big_showYAxisLabel"
             [xAxis]="big_xAxis"
@@ -133,7 +120,9 @@
             [xAxisLabel]="big_xAxisLabel"
             [yAxisLabel]="big_yAxisLabel"
             [timeline]="big_timeline"
-            [results]="multi"
+            [results]="slectValues"
+            [yScaleMax]="yScaleMax"
+            [yScaleMin]="yScaleMin"
             (select)="onSelect($event)">
           </ngx-charts-line-chart>
       </figure>
