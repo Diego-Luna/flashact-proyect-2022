@@ -50,25 +50,25 @@ export class ItemMcaComponent implements OnInit {
     name: 'myScheme',
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['#A8EAC6', '#a8eac64d'],
+    domain: ['#21d59b', '#9cebca'],
   };
   colorScheme_tem: Color = {
     name: 'myScheme',
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['#EC9E97', '#a8eac64d'],
+    domain: ['#FF3212', '#EB9E98'],
   };
   colorScheme_tur: Color = {
     name: 'myScheme',
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['#FEE39A', '#a8eac64d'],
+    domain: ['#FFC700', '#ffe68f'],
   };
   colorScheme_tds: Color = {
     name: 'myScheme',
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['#B8DCFE', '#a8eac64d'],
+    domain: ['#7fdcf0', '#bedffe'],
   };
 
 
@@ -76,7 +76,7 @@ export class ItemMcaComponent implements OnInit {
     name: 'myScheme',
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['#A8EAC6', '#a8eac64d'],
+    domain: ['#21d59b', '#9cebca'],
   };
 
   constructor() {
@@ -96,32 +96,40 @@ export class ItemMcaComponent implements OnInit {
         this.slectValues = this.sense.ph;
         this.yScaleMin = 0;
         this.yScaleMax = 14;
-        this.colorScheme_big.domain[0] = '#A8EAC6';
+        this.colorScheme_big.domain[0] = '#21d59b';
+        this.colorScheme_big.domain[1] = '#9cebca';
+        this.big_yAxisLabel = 'PH';
         break;
       case 2:
         this.slectValues = this.sense.temperature;
         this.yScaleMin = -10;
         this.yScaleMax = 85;
-        this.colorScheme_big.domain[0] = '#EC9E97';
+        this.colorScheme_big.domain[0] = '#D22D1F';
+        this.colorScheme_big.domain[1] = '#EB9E98';
+        this.big_yAxisLabel = 'Tem';
         break;
       case 3:
         this.slectValues = this.sense.turbidity;
         this.yScaleMin = 0;
-        this.yScaleMax = 1000;
-        this.colorScheme_big.domain[0] = '#FEE39A';
+        this.yScaleMax = 50;
+        this.colorScheme_big.domain[0] = '#FFC700';
+        this.colorScheme_big.domain[1] = '#ffe68f';
+        this.big_yAxisLabel = 'Tur';
+
         break;
       case 4:
         this.slectValues = this.sense.tds;
         this.yScaleMin = 0;
         this.yScaleMax = 1000;
-        this.colorScheme_big.domain[0] = '#B8DCFE';
+        this.colorScheme_big.domain[0] = '#7fdcf0';
+        this.colorScheme_big.domain[1] = '#bedffe';
+        this.big_yAxisLabel = 'Tds';
         break;
       default:
         break;
     }
 
     console.log(`CLick : ${sense}`);
-    
   }
 
 

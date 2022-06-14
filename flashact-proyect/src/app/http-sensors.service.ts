@@ -12,7 +12,8 @@ import { SenseItem } from './models/reqres-response';
 })
 export class HttpSensorsService {
 
-  rutaApi = "http://localhost:8080/sensor/";
+  // rutaApi = "http://localhost:8080/sensor/";
+  rutaApi = "https://acercamientos-al-agua.uc.r.appspot.com/sensor/";
   totalAngularPackages: any;
   error:any;
 

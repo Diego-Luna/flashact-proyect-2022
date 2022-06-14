@@ -49,6 +49,8 @@ img{
   position: absolute;
   right: 2%;
   top: calc(50% - 40px);
+  width: 65px;
+  height: 65px;
 }
 
 /* sensores */
@@ -115,7 +117,7 @@ img{
   margin-top: 10px;
   font-size: 1.2rem;
   color: black;
-  /* color: #a8eac64d; */
+  /* color: #a8eac642; */
   text-align: left;
 }
 .data-time{
