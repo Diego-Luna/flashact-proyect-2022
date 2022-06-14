@@ -16,10 +16,6 @@
       <p> <b class="text-black">ubicación :</b> 20.510526694027835, -103.17511108674198</p>
       <p> <b class="text-black">Institución o comunidad :</b> EUR</p> -->
     </div>
-
-    <!-- <a class="button-container" routerLink="/visualizedata/view/1" routerLinkActive="active">
-      <img src="./assets/item-mca/botton.svg" alt="botton">
-    </a> -->
   </div>
 
   <!-- sensores -->
@@ -31,8 +27,23 @@
           <!-- <h3>316.20</h3> -->
           <h3>{{sense.ph.value[sense.ph.value.length - 1]}}</h3>
         </div>
-        <figure class="grafica">
-          <img src="./assets/item-mca/graficas/ph.svg" alt="mapa">
+        <figure class="grafica" #grafica_small>
+          <!-- <img src="./assets/item-mca/graficas/ph.svg" alt="mapa"> scheme="fire" -->
+          <!-- [view]="small_view" -->
+          <ngx-charts-area-chart
+            [view]="[grafica_small.offsetWidth, grafica_small.offsetHeight]"
+            [scheme]="colorScheme_ph"
+            [legend]="small_legend"
+            [showXAxisLabel]="small_showXAxisLabel"
+            [showYAxisLabel]="small_showYAxisLabel"
+            [xAxis]="small_xAxis"
+            [yAxis]="small_yAxis"
+            [xAxisLabel]="small_xAxisLabel"
+            [yAxisLabel]="small_yAxisLabel"
+            [timeline]="small_timeline"
+            [results]="multi"
+            (select)="onSelect($event)">
+          </ngx-charts-area-chart>
         </figure>
       </div>
       <div class="sensor">
@@ -41,7 +52,21 @@
           <h3>{{sense.temperature.value[sense.temperature.value.length - 1]}}</h3>
         </div>
         <figure class="grafica">
-          <img src="./assets/item-mca/graficas/tem.svg" alt="mapa">
+          <!-- <img src="./assets/item-mca/graficas/tem.svg" alt="mapa"> -->
+          <ngx-charts-area-chart
+            [view]="[grafica_small.offsetWidth, grafica_small.offsetHeight]"
+            [scheme]="colorScheme_tem"
+            [legend]="small_legend"
+            [showXAxisLabel]="small_showXAxisLabel"
+            [showYAxisLabel]="small_showYAxisLabel"
+            [xAxis]="small_xAxis"
+            [yAxis]="small_yAxis"
+            [xAxisLabel]="small_xAxisLabel"
+            [yAxisLabel]="small_yAxisLabel"
+            [timeline]="small_timeline"
+            [results]="multi"
+            (select)="onSelect($event)">
+          </ngx-charts-area-chart>
         </figure>
       </div>
       <div class="sensor">
@@ -51,7 +76,21 @@
           <h3>{{sense.turbidity.value[sense.turbidity.value.length - 1]}}</h3>
         </div>
         <figure class="grafica">
-          <img src="./assets/item-mca/graficas/tur.svg" alt="mapa">
+          <!-- <img src="./assets/item-mca/graficas/tur.svg" alt="mapa"> -->
+          <ngx-charts-area-chart
+            [view]="[grafica_small.offsetWidth, grafica_small.offsetHeight]"
+            [scheme]="colorScheme_tur"
+            [legend]="small_legend"
+            [showXAxisLabel]="small_showXAxisLabel"
+            [showYAxisLabel]="small_showYAxisLabel"
+            [xAxis]="small_xAxis"
+            [yAxis]="small_yAxis"
+            [xAxisLabel]="small_xAxisLabel"
+            [yAxisLabel]="small_yAxisLabel"
+            [timeline]="small_timeline"
+            [results]="multi"
+            (select)="onSelect($event)">
+          </ngx-charts-area-chart>
         </figure>
       </div>
       <div class="sensor">
@@ -61,14 +100,42 @@
           <h3>{{sense.tds.value[sense.tds.value.length - 1]}}</h3>
         </div>
         <figure class="grafica">
-          <img src="./assets/item-mca/graficas/tds.svg" alt="mapa">
+          <!-- <img src="./assets/item-mca/graficas/tds.svg" alt="mapa"> -->
+          <ngx-charts-area-chart
+          [view]="[grafica_small.offsetWidth, grafica_small.offsetHeight]"
+            [scheme]="colorScheme_tds"
+            [legend]="small_legend"
+            [showXAxisLabel]="small_showXAxisLabel"
+            [showYAxisLabel]="small_showYAxisLabel"
+            [xAxis]="small_xAxis"
+            [yAxis]="small_yAxis"
+            [xAxisLabel]="small_xAxisLabel"
+            [yAxisLabel]="small_yAxisLabel"
+            [timeline]="small_timeline"
+            [results]="multi"
+            (select)="onSelect($event)">
+          </ngx-charts-area-chart>
         </figure>
       </div>
     </div>
     <div class="grafic-sense">
       <h4>Ph</h4>
-      <figure class="data-time">
-        <img src="./assets/item-mca/graficas/data-time.png" alt="data-time">
+      <figure class="data-time" #containerRef>
+        <!-- <img src="./assets/item-mca/graficas/data-time.png" alt="data-time"> -->
+        <!-- [view]="big_view" -->
+        <ngx-charts-area-chart
+            [view]="[containerRef.offsetWidth, containerRef.offsetHeight]"
+            [legend]="big_legend"
+            [showXAxisLabel]="big_showXAxisLabel"
+            [showYAxisLabel]="big_showYAxisLabel"
+            [xAxis]="big_xAxis"
+            [yAxis]="big_yAxis"
+            [xAxisLabel]="big_xAxisLabel"
+            [yAxisLabel]="big_yAxisLabel"
+            [timeline]="big_timeline"
+            [results]="multi"
+            (select)="onSelect($event)">
+          </ngx-charts-area-chart>
       </figure>
 
       <a class="button-container" routerLink="/visualizedata/view/1" routerLinkActive="active">

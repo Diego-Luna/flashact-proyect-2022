@@ -4,6 +4,10 @@ import { FormsModule } from '@angular/forms';
 // import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -33,7 +37,8 @@ import { InsideMcaComponent } from './visualisarData/inside-mca/inside-mca.compo
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    
+    NgxChartsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
