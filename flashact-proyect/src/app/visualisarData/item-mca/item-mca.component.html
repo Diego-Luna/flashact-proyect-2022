@@ -123,7 +123,7 @@
       <figure class="data-time" #containerRef>
         <!-- <img src="./assets/item-mca/graficas/data-time.png" alt="data-time"> -->
         <!-- [view]="big_view" -->
-        <ngx-charts-area-chart
+        <ngx-charts-line-chart
             [view]="[containerRef.offsetWidth, containerRef.offsetHeight]"
             [legend]="big_legend"
             [showXAxisLabel]="big_showXAxisLabel"
@@ -135,7 +135,7 @@
             [timeline]="big_timeline"
             [results]="multi"
             (select)="onSelect($event)">
-          </ngx-charts-area-chart>
+          </ngx-charts-line-chart>
       </figure>
 
       <a class="button-container" routerLink="/visualizedata/view/1" routerLinkActive="active">

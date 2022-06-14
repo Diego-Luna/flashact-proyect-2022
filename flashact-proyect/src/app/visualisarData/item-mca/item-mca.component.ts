@@ -73,7 +73,6 @@ export class ItemMcaComponent implements OnInit {
     domain: ['#A8EAC6'],
   };
 
-
   multi = [
     {
       "name": "ph",
@@ -120,5 +119,13 @@ export class ItemMcaComponent implements OnInit {
 
   onSelect(event: any): void {
     console.log(event);
+  }
+
+  onActivate(data: any): void {
+    console.log('Activate', JSON.parse(JSON.stringify(data)));
+  }
+
+  onDeactivate(data: any): void {
+    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
 }
