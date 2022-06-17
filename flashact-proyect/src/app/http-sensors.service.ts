@@ -12,18 +12,19 @@ import { SenseItem } from './models/reqres-response';
 })
 export class HttpSensorsService {
 
-  // rutaApi = "http://localhost:8080/sensor/";
-  rutaApi = "https://acercamientos-al-agua.uc.r.appspot.com/sensor/";
+  rutaApi = "http://localhost:8080/";
+  // rutaApi = "https://acercamientos-al-agua.uc.r.appspot.com/sensor/";
   totalAngularPackages: any;
   error:any;
 
   constructor(private http: HttpClient) {}
 
-  // getData(): Observable<[]> {
-    // getData() {
-    getData() {
-    // return this.http.get(this.rutaApi);
-    return this.http.get<SenseItem>(this.rutaApi);
+  getData() {
+    return this.http.get<SenseItem>(this.rutaApi + "sensor/");
+  }
+
+  getComparacionData(name:string, number: number) {
+    return this.http.get<SenseItem>(`${this.rutaApi}datacomparison/${name}/${number}/`);
   }
 
 }

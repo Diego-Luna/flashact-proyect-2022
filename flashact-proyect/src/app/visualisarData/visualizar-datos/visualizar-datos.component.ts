@@ -22,7 +22,7 @@ export class VisualizarDatosComponent implements OnInit {
   ngOnInit(): void {
     this.httpSensorsService.getData()
         .subscribe((resp: SenseItem) => {
-      console.log(resp);
+      // console.log(resp);
       this.sensores = resp;
       this.max_sensores = this.sensores.length
 
@@ -30,7 +30,7 @@ export class VisualizarDatosComponent implements OnInit {
         this.view_sensores.push(this.sensores[this.i]);
         this.i += 1;
       }
-      console.log(this.i);
+      // console.log(this.i);
     });
   }
 
