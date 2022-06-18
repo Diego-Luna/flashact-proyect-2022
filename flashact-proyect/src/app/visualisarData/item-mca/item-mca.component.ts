@@ -4,6 +4,9 @@ import { SenseItem } from 'src/app/models/reqres-response';
 import { Color, ScaleType } from '@swimlane/ngx-charts';
 import { HttpSensorsService } from 'src/app/http-sensors.service';
 
+import {GoogleMapsModule} from '@angular/google-maps';
+
+
 @Component({
   selector: 'app-item-mca',
   templateUrl: './item-mca.component.html',
@@ -13,6 +16,274 @@ export class ItemMcaComponent implements OnInit {
 
   @Input() sense: SenseItem | any;
   goodData:any = [];
+
+  // google Maps
+
+  center: google.maps.LatLngLiteral = {lat: 24, lng: 12};
+  zoom = 15;
+
+  markerOptions: google.maps.MarkerOptions = {
+    draggable: false,
+    crossOnDrag: true,
+    optimized: true,
+  };
+  markerPositions: google.maps.LatLngLiteral[] = [];
+
+  labelOptions: google.maps.MarkerLabel = {
+    text: "espera",
+    color: "white",
+    fontSize: "18px"
+  }
+
+  options: google.maps.MapOptions = {
+    // mapTypeId: 'terrain',
+    zoomControl: true,
+    scrollwheel: false,
+    disableDoubleClickZoom: true,
+    clickableIcons: false,
+    disableDefaultUI: true,
+    draggable: false,
+    fullscreenControl: true,
+    mapTypeControl: false,
+    panControl: true,
+    styles: [
+      {
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#1d2c4d"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#8ec3b9"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "color": "#1a3646"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.country",
+        "elementType": "geometry.stroke",
+        "stylers": [
+          {
+            "color": "#4b6878"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#64779e"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.province",
+        "elementType": "geometry.stroke",
+        "stylers": [
+          {
+            "color": "#4b6878"
+          }
+        ]
+      },
+      {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry.stroke",
+        "stylers": [
+          {
+            "color": "#334e87"
+          }
+        ]
+      },
+      {
+        "featureType": "landscape.natural",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#023e58"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#283d6a"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#6f9ba5"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "color": "#1d2c4d"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "color": "#023e58"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#3C7680"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#304a7d"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#98a5be"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "color": "#1d2c4d"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#2c6675"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+          {
+            "color": "#255763"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#b0d5ce"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "color": "#023e58"
+          }
+        ]
+      },
+      {
+        "featureType": "transit",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#98a5be"
+          }
+        ]
+      },
+      {
+        "featureType": "transit",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "color": "#1d2c4d"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.line",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "color": "#283d6a"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.station",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#3a4762"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#0e1626"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#4e6d70"
+          }
+        ]
+      }
+    ]
+    // maxZoom: 15,
+    // minZoom: 8,
+  }
+
+  // Graficas
 
   slectValues: any = [];
   yScaleMin: number = 0;
@@ -86,6 +357,11 @@ export class ItemMcaComponent implements OnInit {
 
 
   ngOnInit(): void {
+
+    this.center = {lat: this.sense.position_x, lng: this.sense.position_y};
+    this.markerPositions = [{lat: this.sense.position_x, lng: this.sense.position_y}];
+    this.labelOptions.text = this.sense.comunity_or_institution;
+
     this.httpSensorsService.getComparacionData("normal", this.sense.ph[0].series.length)
         .subscribe((resp: SenseItem) => {
 
@@ -96,12 +372,9 @@ export class ItemMcaComponent implements OnInit {
         resp.tds[0].series[i].name = this.sense.tds[0].series[i].name;
         resp.turbidity[0].series[i].name = this.sense.turbidity[0].series[i].name;
         resp.temperature[0].series[i].name = this.sense.temperature[0].series[i].name;
-        console.log(`1:${resp.ph[0].series[i].name}, 2:${this.sense.ph[0].series[i].name}`);
         i++;
         lengAllData--;
       }
-
-      console.log(`lengAllData:${lengAllData}, i:${i}`);
 
       this.goodData = resp;
       this.slectValues = [
@@ -187,5 +460,19 @@ export class ItemMcaComponent implements OnInit {
 
   onDeactivate(data: any): void {
     // console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+  }
+
+
+  // Google Maps
+  moveMap(event: google.maps.MapMouseEvent) {
+    // this.center = (event.latLng.toJSON());
+  }
+
+  move(event: google.maps.MapMouseEvent) {
+    // this.display = event.latLng.toJSON();
+  }
+
+  addMarker(event: google.maps.MapMouseEvent) {
+    // this.markerPositions.push(event.latLng.toJSON());
   }
 }

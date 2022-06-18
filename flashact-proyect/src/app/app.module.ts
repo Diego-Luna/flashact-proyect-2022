@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-// import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { GoogleMapsModule } from '@angular/google-maps'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,7 +38,8 @@ import { InsideMcaComponent } from './visualisarData/inside-mca/inside-mca.compo
     FormsModule,
     HttpClientModule,
     NgxChartsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

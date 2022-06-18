@@ -2,8 +2,25 @@
   <div class="item-info-container">
    <!-- mapa -->
     <div class="two" >
-      <figure class="mapa-container">
-        <img src="./assets/item-mca/mapa.png" alt="mapa">
+      <figure class="mapa-container" #map_container>
+        <!-- <img src="./assets/item-mca/mapa.png" alt="mapa"> -->
+        <!-- <google-map></google-map> -->
+        <!-- height="400px"
+        width="750px" -->
+        <google-map
+            height={{map_container.offsetHeight}}
+            width={{map_container.offsetWidth}}
+            [options]="options"
+            [center]="center"
+            [zoom]="zoom"
+            (mapClick)="moveMap($event)"
+            (mapMousemove)="move($event)">
+            <map-marker *ngFor="let markerPosition of markerPositions"
+              [position]="markerPosition"
+              [label]="labelOptions"
+              [options]="markerOptions"
+              ></map-marker>
+        </google-map>
       </figure>
     </div>
 
