@@ -12,6 +12,7 @@ import { SenseItem } from 'src/app/models/reqres-response';
 export class InsideMcaMachineComponent implements OnInit {
 
   url: string = "";
+  sense: SenseItem | any;
 
   constructor(private _location: Location, private router: Router, private httpSensorsService: HttpSensorsService) {}
 
@@ -24,6 +25,8 @@ export class InsideMcaMachineComponent implements OnInit {
       if(!(resp.name)){
         this._location.back();
       }
+
+      this.sense = resp;
     });;
   }
 
