@@ -19,6 +19,10 @@ export class HttpSensorsService {
     return this.http.get<SenseItem>(this.rutaApi + "sensor/");
   }
 
+  getSensorData(name:string) {
+    return this.http.get<SenseItem>(`${this.rutaApi}sensor/${name}`);
+  }
+
   getComparacionData(name:string, number: number) {
     return this.http.get<SenseItem>(`${this.rutaApi}datacomparison/${name}/${number}/`);
   }

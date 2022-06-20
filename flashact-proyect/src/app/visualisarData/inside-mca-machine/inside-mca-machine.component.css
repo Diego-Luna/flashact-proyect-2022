@@ -1,9 +1,8 @@
 main{
-  width: calc(80vw - 160px);
+  width: calc(60vw);
   height: calc(80vh - 160px);
-  margin: auto;
-  padding: 80px;
-  background-color: white;
+  padding-left: 20vw;
+  padding-right: 20vw;
   border: none;
   border-radius: 36px;
   margin-top: 10vh;
@@ -11,7 +10,24 @@ main{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
+
+/* main{
+  width: calc(80vw - 160px);
+  height: calc(80vh - 160px);
+  margin: auto;
+  padding: 80px; */
+  /* background-color: white; */
+  /* border: none;
+  border-radius: 36px;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+} */
 
 /* botton */
 button{
@@ -77,10 +93,107 @@ button img{
 .arte-container{
   width: 100%;
   height: 100%;
-  background-color: #BEE6FF;
+  /* background-color: #BEE6FF; */
+  position: relative;
 }
-.arte-container img{
+/* .arte-container img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+} */
+
+/* animacion */
+
+.wave1,
+.wave2,
+.wave3,
+.wave4
+{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250vw;
+  height: 250vw;
+  margin-left: -125vw;
+  transform-origin: 50% 50%;
+  background-color: transparent;
+  border-radius: 38% 42%;
+  box-shadow: inset 0 0 10vw #21d59b;
+  animation: spin 16s infinite linear;
 }
+
+.wave2 {
+  /* width: 105%;
+  height: 95%;
+  margin-top: -125vw;
+  transform-origin: 49% 51%;
+  border-radius: 40% 38%; */
+  box-shadow: inset 0 0 10vw #D22D1F;
+  animation: spin 13s infinite linear;
+}
+
+.wave3 {
+  /* width: 102%;
+  height: 98%;
+  margin-top: -125vw;
+  transform-origin: 51% 49%;
+  border-radius: 48% 42%; */
+  box-shadow: inset 0 0 10vw #FFC700;
+  animation: spin 10s infinite linear;
+}
+.wave4 {
+  /* width: 102%;
+  height: 98%;
+  margin-top: -125vw;
+  transform-origin: 51% 49%;
+  border-radius: 48% 42%; */
+  box-shadow: inset 0 0 10vw #7fdcf0;
+  animation: spin 7s infinite linear;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* .wave,
+.wave::before,
+.wave::after
+{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250vw;
+  height: 250vw;
+  margin-left: -125vw;
+  transform-origin: 50% 50%;
+  background-color: transparent;
+  border-radius: 38% 42%;
+  box-shadow: inset 0 0 10vw #21d59b;
+  animation: spin 16s infinite linear;
+}
+
+.wave::before {
+  width: 105%;
+  height: 95%;
+  margin-top: -125vw;
+  transform-origin: 49% 51%;
+  border-radius: 40% 38%;
+  box-shadow: inset 0 0 10vw #D22D1F;
+  animation: spin 13s infinite linear;
+}
+
+.wave::after {
+  width: 102%;
+  height: 98%;
+  margin-top: -125vw;
+  transform-origin: 51% 49%;
+  border-radius: 48% 42%;
+  box-shadow: inset 0 0 10vw #FFC700;
+  animation: spin 10s infinite linear;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+} */
