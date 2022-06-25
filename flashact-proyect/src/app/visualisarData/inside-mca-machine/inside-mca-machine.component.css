@@ -120,36 +120,28 @@ button img{
   background-color: transparent;
   border-radius: 38% 42%;
   box-shadow: inset 0 0 10vw #21d59b;
-  animation: spin 16s infinite linear;
+  /* animation: spin 16s infinite linear; */
+  animation: spin infinite linear;
 }
 
 .wave2 {
-  /* width: 105%;
-  height: 95%;
-  margin-top: -125vw;
-  transform-origin: 49% 51%;
-  border-radius: 40% 38%; */
   box-shadow: inset 0 0 10vw #D22D1F;
-  animation: spin 13s infinite linear;
+  /* animation: spin 13s infinite linear; */
+  animation: spin infinite linear;
+  animation-delay: 0.15s;
 }
 
 .wave3 {
-  /* width: 102%;
-  height: 98%;
-  margin-top: -125vw;
-  transform-origin: 51% 49%;
-  border-radius: 48% 42%; */
   box-shadow: inset 0 0 10vw #FFC700;
-  animation: spin 10s infinite linear;
+  /* animation: spin 10s infinite linear; */
+  animation: spin infinite linear;
+  animation-delay: 0.25s;
 }
 .wave4 {
-  /* width: 102%;
-  height: 98%;
-  margin-top: -125vw;
-  transform-origin: 51% 49%;
-  border-radius: 48% 42%; */
   box-shadow: inset 0 0 10vw #7fdcf0;
-  animation: spin 7s infinite linear;
+  /* animation: spin 7s infinite linear; */
+  animation: spin infinite linear;
+  animation-delay: 0.35s;
 }
 
 @keyframes spin {

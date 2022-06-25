@@ -26,6 +26,6 @@
   <div class="lista-items">
     <app-item-mca *ngFor="let sensor of view_sensores" [sense]="sensor"></app-item-mca>
     <!-- <app-item-mca routerLink="/visualizedata/view/2" routerLinkActive="active"></app-item-mca> -->
-    <button (click)="moreSensors()" >Mostrar Más</button>
+    <button *ngIf="i > max_sensores" (click)="moreSensors()" >Mostrar Más</button>
   </div>
 </section>

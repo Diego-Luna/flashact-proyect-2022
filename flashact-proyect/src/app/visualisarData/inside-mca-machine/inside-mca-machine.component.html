@@ -13,10 +13,10 @@
     <figure class="arte-container ">
       <!-- <img src="./assets/inside-mca/arte.svg" alt="artista"> -->
       <!-- <div class="wave"></div> -->
-      <div class="wave1"></div>
-      <div class="wave2"></div>
-      <div class="wave3"></div>
-      <div class="wave4"></div>
+      <div class="wave1" [ngStyle]="{'animation-duration':returnPh()}"></div>
+      <div class="wave2" [ngStyle]="{'animation-duration':returnTem()}"></div>
+      <div class="wave3" [ngStyle]="{'animation-duration':returnTur()}"></div>
+      <div class="wave4" [ngStyle]="{'animation-duration':returnTDS()}"></div>
     </figure>
   </section>
 </main>

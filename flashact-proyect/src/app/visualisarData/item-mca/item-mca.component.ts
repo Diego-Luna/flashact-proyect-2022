@@ -424,7 +424,7 @@ export class ItemMcaComponent implements OnInit {
           this.goodData.turbidity[0]
         ];
         this.yScaleMin = 0;
-        this.yScaleMax = 50;
+        this.yScaleMax = 5;
         this.colorScheme_big.domain[0] = '#FFC700';
         this.colorScheme_big.domain[1] = '#ffe68f';
         this.big_yAxisLabel = 'Tur';
