@@ -10,6 +10,10 @@ button{
   font-size: 2rem;
 }
 
+.header-content{
+  width: 50%;
+}
+
 h1{
   font-size: 5.7rem;
   font-weight: bold;

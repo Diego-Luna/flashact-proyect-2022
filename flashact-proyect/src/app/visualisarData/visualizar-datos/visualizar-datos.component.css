@@ -68,3 +68,12 @@ main{
 .lista-items{
   padding-bottom: 60px;
 }
+
+.frase{
+  margin: 10% 0 10% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  color: white;
+}
