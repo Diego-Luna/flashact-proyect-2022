@@ -1,0 +1,289 @@
+<app-menu></app-menu>
+
+<section class="container etapas-section" id="menu">
+  <div class="etapas-list">
+    <a href="#estapa-1" class="no-a etapa-b">
+      <app-big-stage [imgUrl]='"./assets/etapas/etapa_1.svg"' [sectionName]='"Etapa 1"' [titleName]='"Calibración sensores"' ></app-big-stage>
+    </a>
+    <a href="#estapa-2" class="no-a etapa-s">
+      <app-small-stage class="" [imgUrl]='"./assets/etapas/etapa_2.svg"' [sectionName]='"Etapa 2"' [titleName]='"Electronica"' [colorSection]='"white"' [colorbackground]='"#53A6D8"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage>
+    </a>
+    <a href="#estapa-3" class="no-a etapa-s">
+      <app-small-stage class="" [imgUrl]='"./assets/etapas/etapa_2.svg"' [sectionName]='"Etapa 3"' [titleName]='"Programación"' [colorSection]='"white"' [colorbackground]='"#045C93"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage>
+    </a>
+  </div>
+  <div class="etapas-list">
+    <a href="#estapa-4" class="no-a etapa-s">
+      <app-small-stage class="etapa-s" [imgUrl]='"./assets/etapas/etapa_2.svg"' [sectionName]='"Etapa 4"' [titleName]='"Armado"' [colorSection]='"white"' [colorbackground]='"#53A6D8"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage>
+    </a>
+    <a href="#estapa-5" class="no-a etapa-s">
+      <app-small-stage class="etapa-s" [imgUrl]='"./assets/etapas/etapa_5.svg"' [sectionName]='"Etapa 5"' [titleName]='"Instalar"' [colorSection]='"white"' [colorbackground]='"#045C93"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-small-stage>
+    </a>
+    <a href="https://comunidad-fact2022.web.app/" class="no-a etapa-b">
+      <app-big-stage class="etapa-b" [imgUrl]='"./assets/etapas/etapa_6.svg"' [sectionName]='"Etapa 6"' [titleName]='"Comparte tu experiencia"' [colorSection]='"white"' [colorbackground]='"#222222"' [colorTitle]='"rgba(255,255,255, 0.52)"' ></app-big-stage>
+    </a>
+  </div>
+</section>
+
+<app-back-button></app-back-button>
+
+<!-- calibracion sensores -->
+<section class="container-all" id="estapa-1">
+  <div class="seccion-name">
+    <h2>Calibración sensores</h2>
+  </div>
+  <div class="seccion-steps-block">
+    <div class="seccion-img">
+      <figure class="principal-img">
+        <img class="object-fit_revert" src="{{getImageSections('1', './assets/pasos/1_calibracion')}}" alt="" >
+      </figure>
+      <div class="selec-imgs">
+        <div class="selec-item " [ngClass]="{'selec-item': true, 'selec-user': ((status_section_1 === 1) ? true : false)}" (click)="change_status('1', 1)">
+          <figure class="img-small">
+            <img class="object-fit_revert" src="./assets/pasos/1_calibracion/1.jpg" alt="">
+          </figure>
+          <div class="selec-item-info">
+            <p><b>Paso 1</b></p>
+          </div>
+        </div>
+        <div class="selec-item " [ngClass]="{'selec-item': true, 'selec-user': ((status_section_1 === 2) ? true : false)}" (click)="change_status('1', 2)">
+          <figure class="img-small">
+            <img class="object-fit_revert" src="./assets/pasos/1_calibracion/2.jpg" alt="">
+          </figure>
+          <div class="selec-item-info">
+            <p><b>Paso 2</b></p>
+          </div>
+        </div>
+        <div class="selec-item " [ngClass]="{'selec-item': true, 'selec-user': ((status_section_1 === 3) ? true : false)}" (click)="change_status('1', 3)">
+          <figure class="img-small">
+            <img class="object-fit_revert" src="./assets/pasos/1_calibracion/3.jpg" alt="">
+          </figure>
+          <div class="selec-item-info">
+            <p><b>Paso 3</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block-seccion-info">
+      <h3>Paso 1</h3>
+      <p>
+        Para programar el arduino usaremos el Arduino IDE, puedes usar la versión web o puedes descargarlo en tu computadora. 
+      <br>
+      <br>
+      Abre el programa y ve a Herramientas > Placas > Gestor de tarjetas,después busca “Arduino MKR” e instálalo. Conecta el módulo del sensor de PH de la siguiente manera:
+      <br>
+      - Cable rojo a 5v
+      <br>
+      - Cable megro a GND
+      <br>
+      - Cable azul a A0 
+      <br>
+      <br>
+      Perfecto, ahora coloca el sensor en un líquido de ph = 7.00.
+      Abre el código “Calibracion_de_Ph”, conecta el arduino a la computadora y selecciona la placa, ve a Herramientas > placas y selecciona el puerto, por último sube el código y abre el monitor serial, aqui veras el valor del sensor, ahora deberás mover el potenciómetro para bajar o subir el valor del sensor para ser el de tu líquido de muestreo en este caso ph = 7.00.
+
+      <br>
+      <br>
+      También para finalizar debes calcular la diferencia del valor medido y el correcto, para colocarlo en el valor “#define Offset 0.00”. Por ejemplo, si el valor medio es de 9 y el correcto es 7, la diferencia es 2, asi que modificas “#define Offset -2.00”. 
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- seccion - block : Electronica -->
+<section class="container-all" id="estapa-2">
+  <div class="seccion-name electronica">
+    <h2>Electronica</h2>
+  </div>
+  <div class="seccion-steps-block">
+    <div class="seccion-img">
+      <figure class="principal-img">
+        <!-- <img src="./assets/pasos/2_electronica/1.jpg" alt=""> -->
+        <img src="{{getImageSections('2', './assets/pasos/2_electronica')}}" alt="">
+      </figure>
+      <div class="selec-imgs">
+        <div [ngClass]="{'selec-item': true, 'selec-user': ((status_section_2 === 1) ? true : false)}" (click)="change_status('2', 1)">
+          <figure class="img-small">
+            <img src="./assets/pasos/2_electronica/1.jpg" alt="">
+          </figure>
+          <div class="selec-item-info">
+            <p><b>Paso 1</b></p>
+          </div>
+        </div>
+        <div [ngClass]="{'selec-item': true, 'selec-user': ((status_section_2 === 2) ? true : false)}" (click)="change_status('2', 2)">
+          <figure class="img-small">
+            <img src="./assets/pasos/2_electronica/2.jpg" alt="">
+          </figure>
+          <div class="selec-item-info">
+            <p><b>Paso 2</b></p>
+          </div>
+        </div>
+        <div [ngClass]="{'selec-item': true, 'selec-user': ((status_section_2 === 3) ? true : false)}" (click)="change_status('2', 3)">
+          <figure class="img-small">
+            <img src="./assets/pasos/2_electronica/3.jpg" alt="">
+          </figure>
+          <div class="selec-item-info">
+            <p><b>Paso 3</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block-seccion-info">
+      <h3>Paso 1</h3>
+      <p>
+        Empieza con las conexiones:
+        <br>
+        1; Conecta todos los cables rojos o positivos de los sensores y conectalos en el positivo de la batería (5V).
+        <br>
+        2; Depsues conecta los cables negros o negativos y conectalos al lado negativo de la bateria (GND).
+        <br>
+        3; Ahora conecta los cables de datos de los sensores, temperatura conectalo a D2, pH a A0, TDS a A1 y Turbiedad a A2.
+        <br>
+        4; Por último conecta el arduino a la batería a 3.7vz
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- seccion: programacion -->
+<section class="container-all" id="estapa-3">
+  <div class="seccion-name programacion">
+    <h2>Programacion</h2>
+    <figure class="seccion-programacion-position rotateZ">
+      <img src="./assets/arduino.svg" alt="">
+    </figure>
+  </div>
+  <div class="seccion-steps programacion-flex">
+    <div class="seccion-steps-info programacion-info">
+      <!-- <h3>Titulo …</h3> -->
+      <br>
+      <p class="p-code">
+        Empieza con las librerías, ve a Programa > Incluir libreria > administrar librerías, busca e instala las siguientes librerias: “Arduino Low Power”, “MKRWAN”, “MKRWAN_v2”, “OneWire”, “DallasTemperature”.
+      </p>
+      <br>
+      <button class="button-code">
+        <a href="">ver codigo</a>
+      </button>
+      <br>
+      <p class="p-code">
+        Abre el código “medidor-de-calidad-del-agua.ino”, ahora agrega la información para identificar tu sonda, modifica la sección de “nombre” y la  “Comunidad_o_institucion” esto con un máximo 20 caracteres y sin espacios, ni comas. 
+      </p>
+      <p class="p-code">
+        Después modifica la posición en la que se encuentra la sonda en X(latitud) y en Y(longitud). Luego la hora en que se va a instalar en el cuerpo de agua, al igual que agregar los horarios para dos recolecciones de valores durante un día. No olvides colocar el valor de calibración del sensor de ph en “#define Offset”, puedes conocer más información en el paso de calibración de sensores.
+      </p>
+    </div>
+
+    <div class="seccion-steps-code">
+      <figure>
+        <!-- <img src="./assets/pasos/3-Programacion/1.jpg" alt=""> -->
+        <img src="{{getImageSections('3', './assets/pasos/3-Programacion')}}" alt="">
+      </figure>
+
+      <div class="container-flex flex-space-between">
+        <figure [ngClass]="{'selec-user': ((status_section_3 === 1) ? true : false)}" (click)="change_status('3', 1)">
+          <img src="./assets/pasos/3-Programacion/1.jpg" alt="">
+        </figure>
+        <figure [ngClass]="{'selec-user': ((status_section_3 === 2) ? true : false)}" (click)="change_status('3', 2)">
+          <img src="./assets/pasos/3-Programacion/2.jpg" alt="">
+        </figure>
+        <figure [ngClass]="{'selec-user': ((status_section_3 === 3) ? true : false)}" (click)="change_status('3', 3)">
+          <img src="./assets/pasos/3-Programacion/3.jpg" alt="">
+        </figure>
+        <figure [ngClass]="{'selec-user': ((status_section_3 === 4) ? true : false)}" (click)="change_status('3', 4)">
+          <img src="./assets/pasos/3-Programacion/4.jpg" alt="">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- seccion - block : Armado -->
+<section class="container-all" id="estapa-4">
+  <div class="seccion-name electronica">
+    <h2>Armado</h2>
+    <figure class="seccion-programacion-position armado-img-secction armado">
+      <img src="./assets/tools.svg" alt="">
+    </figure>
+  </div>
+  <div class="seccion-steps programacion-flex">
+    <div class="seccion-steps-info programacion-info">
+      <!-- <h3>Titulo …</h3> -->
+      <br>
+      <p class="p-code">
+        Para el armado, debes imprimir el diseño en 3d de la boya, esta se divide en 2 zonas, una es la zona de las sondas y la otra es la de electrónica.
+        <br>
+        <br>
+        Con ayuda de tornillos,une las piezas, también la versión 1.0 necesita 4 flotadores adicionales, guíate con las imágenes.
+      </p>
+      <br>
+      <button class="button-code">
+        <a href="">Diseño 3D</a>
+      </button>
+    </div>
+
+    <div class="seccion-steps-code">
+      <figure>
+        <!-- <img src="./assets/pasos/4_armado/1.jpg" alt=""> -->
+        <img src="{{getImageSections('4', './assets/pasos/4_armado')}}" alt="">
+      </figure>
+
+      <div class="container-flex flex-space-between">
+        <figure [ngClass]="{'selec-user': ((status_section_4 === 1) ? true : false)}" (click)="change_status('4', 1)">
+          <img src="./assets/pasos/4_armado/1.jpg" alt="">
+        </figure>
+        <figure [ngClass]="{'selec-user': ((status_section_4 === 2) ? true : false)}" (click)="change_status('4', 2)">
+          <img src="./assets/pasos/4_armado/2.jpg" alt="">
+        </figure>
+        <figure [ngClass]="{'selec-user': ((status_section_4 === 3) ? true : false)}" (click)="change_status('4', 3)">
+          <img src="./assets/pasos/4_armado/4.jpg" alt="">
+        </figure>
+        <figure [ngClass]="{'selec-user': ((status_section_4 === 4) ? true : false)}" (click)="change_status('4', 4)">
+          <img src="./assets/pasos/4_armado/4.jpg" alt="">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- seccion de instalar-->
+<section class="container-all" id="estapa-5">
+  <div class="seccion-name electronica">
+    <h2>Intalar</h2>
+  </div>
+  <div class="content-intalar">
+    <figure class="white-content white-principal">
+
+    </figure>
+    <div class="info-seccion-armado">
+      <h3>Tips</h3>
+      <p>informacion</p>
+      <div class="examples">
+        <h4>Ejemplos</h4>
+          <!-- list -->
+          <div class="ubicacion-list">
+
+              <div class="ubicacion-item">
+                <p>Ubicacion</p>
+                <figure class="white-content white-small">
+                </figure>
+              </div>
+
+              <div class="ubicacion-item">
+                <p>Ubicacion</p>
+                <figure class="white-content white-small">
+                </figure>
+              </div>
+
+              <!-- <div class="ubicacion-item">
+                <p>Ubicacion</p>
+                <figure class="white-content white-small">
+                </figure>
+              </div> -->
+
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

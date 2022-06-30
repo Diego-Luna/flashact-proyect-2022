@@ -1,0 +1,356 @@
+.no-a{
+  text-decoration: none;
+}
+.container{
+  width: 90vw;
+  height: 100vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.etapas-section{
+  height: 60vh;
+}
+
+.etapas-list{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+
+.etapa-b{
+  width: 47.5%;
+  height: 95%;
+  max-height: 200px;
+}
+
+.etapa-s{
+  width: 23.75%;
+  height: 95%;
+  max-height: 200px;
+}
+
+.selec-user{
+  filter: brightness(40%);
+}
+
+/* seccion  1*/
+.container-all-more,
+.container-all{
+  margin-top: 20vh;
+  width: 100vw;
+  height: 100vh;
+}
+.container-all-more{
+  height: 120vh;
+}
+.seccion-name{
+  width: calc(100% - 8vw);
+  height: 15vh;
+  padding-left: 8vw;
+  background-color: #EDEDED;
+  display: flex;
+  align-items: center;
+}
+h2{
+  color: rgba(0, 0, 0, .70);
+  font-size: 3.5em;
+  font-family: "Cubano", sans-serif;
+}
+h3{
+  font-family: "Cubano", sans-serif;
+  font-size: 2.8em;
+  margin-bottom: 1em;
+}
+
+/* pasos */
+
+p a{
+  color: #53a6d8;
+}
+.seccion-steps{
+  height: calc(100% - 10vw - 15vh);
+  padding: calc(100% - 10vw);
+  padding: 5vw;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.seccion-steps-imgs,
+.seccion-steps-info{
+  height: 100%;
+  width: 50%;
+  max-width: 650px;
+  max-height: 703px;
+}
+
+.seccion-steps-info p{
+  width: 100%;
+  height: 80%;
+}
+
+/* img */
+.seccion-steps-imgs{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  height: calc(100% - 40px);
+  width: calc(50% - 40px);
+  padding: 20px
+}
+.paso{
+  background-color: white;
+}
+.paso-1{
+  width: 460px;
+  height: 290px;
+}
+
+.display-flex{
+  display: flex;
+  width: 23.5%;
+  height: 47%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.paso-2{
+  margin-bottom: 10px;
+}
+.paso-2,
+.paso-3{
+  width: 145px;
+  height: 140px;
+}
+.paso-4,
+.paso-5{
+margin-top: 10px;
+}
+
+.paso-4{
+  width: 290px;
+  height: 145px;
+}
+.paso-5{
+  width: 290px;
+  height: 145px;
+}
+
+/* Electronica */
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.electronica{
+  background-color: #53A6D8;
+}
+.electronica h2 {
+  color: white;
+}
+
+.seccion-steps-block{
+  height: calc(85vh - 6vw);
+  width: calc(100% - 6vw);
+  padding: 3vw;
+}
+
+.seccion-img{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  /* height: 40%; */
+  height: 60%;
+}
+
+.principal-img{
+  width: 50%;
+  height: 100%;
+}
+.selec-imgs{
+  /* width: 35%; */
+  /* width: 25%; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.selec-item-info{
+  width: 50%;
+  margin-left: 8px;
+}
+.selec-item{
+  width: 100%;
+  height: 31%;
+  color: white;
+  display: flex;
+}
+.img-small{
+  height: 100%;
+  /* width: 50%; */
+  width: 20vw;
+}
+/* programacion */
+
+.container-flex figure{
+  width: 20%;
+}
+
+.programacion-info{
+  text-align: center;
+}
+.block-seccion-info{
+  height: calc( 60% - 8vw);
+  width: calc( 100% - 8vw);
+  padding: 4vw;
+  color: white;
+}
+
+.programacion h2{
+  color: white;
+}
+.programacion{
+  background-color: #045C93;
+}
+.button-code{
+  width: 40%;
+  height: 10%;
+  background-color: #045C93;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 56px;
+  margin: auto;
+}
+
+.button-code a{
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+}
+
+.seccion-steps-code div{
+  margin-top: 25px;
+}
+.seccion-steps-code h4{
+  font-size: 3em;
+}
+.seccion-steps-code{
+  height: calc(100% - 40px);
+  /* width: calc(35% - 40px); */
+  width: calc(45% - 40px);
+  padding: 20px;
+}
+.p-code{
+  height: auto !important;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.seccion-programacion-position img{
+  object-fit: contain;
+}
+
+.seccion-programacion-position{
+  height: 300px;
+  width: 150px;
+  margin-left: 25px;
+}
+.rotateZ{
+  transform: rotateZ(333deg);
+}
+/* seccion de intalar */
+
+.content-intalar{
+  display: flex;
+  height: calc(85vh - 8vw);
+  width: calc(100% - 8vw);
+  padding: 4vw;
+  justify-content: space-around;
+  justify-items: center;
+}
+
+.white-content {
+  background-color: white;
+}
+
+/* armado */
+.info-seccion-armado{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-seccion-armado,
+.white-principal{
+  width: 48%;
+  height: 100%;
+  color: white;
+}
+
+.info-seccion-armado h4 {
+  text-align: center;
+  font-size: 1.35em;
+}
+.info-seccion-armado h3{
+  font-size: 3em;
+  margin-left: 2vw;
+}
+.info-seccion-armado p{
+  margin-left: 2vw;
+  width: 80%;
+  height: 40%;
+}
+.armado{
+  position: relative;
+}
+.armado-img-secction{
+  height: 25vh;
+  width: 25vh;
+}
+
+.armado-img-secction img{
+  position: absolute;
+  bottom: 19px;
+}
+
+/* instalar */
+.examples{
+  width: 100%;
+}
+
+.ubicacion-list{
+  margin-left: 2vw;
+  width: calc(100% - 2vw);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* justify-content: space-between; */
+}
+
+.ubicacion-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-small{
+  width: 9vw;
+  height: 9vw;
+}
+.ubicacion-item p{
+  margin: 0;
+  width: auto;
+}

@@ -10,3 +10,15 @@ body{
   font-family: 'Mukta', sans-serif;
   background-color: black;
 }
+
+.object-fit_revert{
+  object-fit: revert;
+}
+
+.container-flex{
+  display: flex;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
