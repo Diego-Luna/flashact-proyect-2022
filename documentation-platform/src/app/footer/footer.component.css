@@ -1,3 +1,10 @@
+
+h3{
+  font-size: 1.5vw;
+}
+p{
+  font-size: 1vw;
+}
 footer{
   margin-top: 150px;
   height: 50vh;
@@ -15,8 +22,9 @@ img{
 }
 
 .logo-container{
-  width: 236px;
-  height: 87px;
+  /* width: 236px;
+  height: 87px; */
+  width: 10vw;
 }
 
 .team-container,
@@ -34,7 +42,8 @@ img{
   display: flex;
 }
 .aecid{
-  width: 509px;
+  /* width: 509px; */
+  width: 40vw;
   height: 76px;
   margin: auto;
   margin-top: 30px;
@@ -44,8 +53,10 @@ img{
 /* person */
 
 .persona-img{
-  width: 134px;
-  height: 134px;
+  /* width: 134px; */
+  /* height: 134px; */
+  width: 9vw;
+  height: 9vw;
   border: 4px solid white;
   border-radius: 100%;
 }
@@ -62,4 +73,32 @@ img{
 }
 .person-container div{
   width: 50%;
+}
+
+@media (max-width: 600px) {
+  footer{
+    flex-direction: column;
+    height: auto;
+  }
+
+  .team-container,
+  .thanks-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .list-logos{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .person-container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  p{
+    font-size: 1.5vw;
+  }
 }

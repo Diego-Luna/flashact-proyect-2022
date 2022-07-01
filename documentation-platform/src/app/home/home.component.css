@@ -237,7 +237,8 @@ img{
 .button-code a{
   text-decoration: none;
   color: white;
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: 2.5vw;
 }
 
 .seccion-steps-code div{
@@ -357,4 +358,76 @@ img{
 .ubicacion-item p{
   margin: 0;
   width: auto;
+}
+
+
+@media (max-width: 800px) {
+
+  .seccion-programacion-position{
+    height: 20vw;
+    width: 10vw;
+  }
+  .programacion-info{
+    font-size: 2vw;
+  }
+  p{
+    font-size: 2vw;
+  }
+  h2{
+    font-size: 5vw;
+  }
+  .seccion-steps{
+    flex-direction: column-reverse;
+  }
+  .seccion-steps-info{
+    width: 100%;
+  }
+
+  .seccion-steps-code {
+    height: calc(80% - 40px);
+    width: calc(100% - 40px);
+  }
+
+  #img-code{
+    margin-top: 10vh;
+  }
+
+  .content-intalar{
+    flex-direction: column;
+  }
+  .info-seccion-armado,
+  .white-principal{
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .etapas-list {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .etapa-b {
+    width: 90%;
+    height: 95%;
+    max-height: 200px;
+    margin-top: 20px;
+  }
+  .etapa-s {
+    width: 90%;
+    margin-top: 20px;
+  }
+  .principal-img{
+    /* width: 70%; */
+    width: 100%;
+  }
+
+  .seccion-img{
+    flex-direction: column;
+  }
+
+  .selec-imgs{
+    flex-direction: row;
+  }
 }

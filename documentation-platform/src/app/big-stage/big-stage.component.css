@@ -13,7 +13,8 @@
 }
 
 h2{
-  font-size: 3em;
+  /* font-size: 3em; */
+  font-size: 2.7vw;
   font-family: "Cubano", sans-serif;
   color: rgba(0, 0, 0, 0.52);
 }
@@ -26,10 +27,13 @@ h3{
 /* img */
 .img-container{
   position: absolute;
-  top: -110px;
+  /* top: -110px; */
+  top: -5.6vw;
   right: 30px;
-  width: 200px;
-  height: 200px;
+  /* width: 200px;
+  height: 200px; */
+  width: 11vw;
+  height: 11vw;
 }
 
 img{
@@ -38,6 +42,22 @@ img{
   /* object-fit: fill; */
   object-fit: cover;
   border: none;
-  border-radius: 40px;
+  /* border-radius: 40px; */
+  border-radius: 2.4vw;
   box-shadow: -10px 20px 10px rgb(0, 0, 0, 20%);
+}
+
+@media (max-width: 800px) {
+  .stage-big{
+    height: 12vw;
+  }
+
+  img{
+    border-radius: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .img-container{
+    top: 2vw;
+  }
 }
