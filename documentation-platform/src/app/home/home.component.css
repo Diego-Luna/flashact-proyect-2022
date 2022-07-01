@@ -68,6 +68,7 @@ h3{
 
 /* pasos */
 
+pre a,
 p a{
   color: #53a6d8;
 }
@@ -88,6 +89,7 @@ p a{
   max-height: 703px;
 }
 
+.seccion-steps-info pre,
 .seccion-steps-info p{
   width: 100%;
   height: 80%;
@@ -306,6 +308,7 @@ img{
   font-size: 3em;
   margin-left: 2vw;
 }
+.info-seccion-armado pre,
 .info-seccion-armado p{
   margin-left: 2vw;
   width: 80%;
@@ -350,6 +353,7 @@ img{
   width: 9vw;
   height: 9vw;
 }
+.ubicacion-item pre,
 .ubicacion-item p{
   margin: 0;
   width: auto;
