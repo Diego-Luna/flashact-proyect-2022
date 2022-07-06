@@ -128,26 +128,59 @@ button img{
   box-shadow: inset 0 0 10vw #D22D1F;
   /* animation: spin 13s infinite linear; */
   animation: spin infinite linear;
-  animation-delay: 0.15s;
+  /* animation-delay: 0.15s; */
 }
 
 .wave3 {
   box-shadow: inset 0 0 10vw #FFC700;
   /* animation: spin 10s infinite linear; */
   animation: spin infinite linear;
-  animation-delay: 0.25s;
+  /* animation-delay: 0.25s; */
 }
 .wave4 {
   box-shadow: inset 0 0 10vw #7fdcf0;
   /* animation: spin 7s infinite linear; */
   animation: spin infinite linear;
-  animation-delay: 0.35s;
+  /* animation-delay: 0.35s; */
 }
 
 @keyframes spin {
   100% { transform: rotate(360deg); }
 }
 
+@media (max-width: 768px) {
+  
+  main{
+    min-height: 500px;
+  }
+  p{
+    font-size: 2vw;
+  }
+  
+  .to-return{
+    font-size: 2.5vw;
+  }
+  
+  button img{
+    height: 3vw;
+  }
+}
+@media (max-width: 525px) {
+  main{
+    padding: 8vw;
+    width: calc(100vw - 16vw);
+  }
+  p{
+    font-size: 3vw;
+  }
+  .to-return{
+    font-size: 3.5vw;
+  }
+  button img{
+    height: 3.5vw;
+  }
+}
+/* animecion original */
 /* .wave,
 .wave::before,
 .wave::after

@@ -4,7 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { GoogleMapsModule } from '@angular/google-maps'
 
@@ -39,7 +41,8 @@ import { InsideMcaComponent } from './visualisarData/inside-mca/inside-mca.compo
     HttpClientModule,
     NgxChartsModule,
     BrowserAnimationsModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

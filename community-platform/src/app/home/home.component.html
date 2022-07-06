@@ -1,9 +1,14 @@
 <section class="container">
   <section class="list">
-    <app-post-item></app-post-item>
-    <app-post-item></app-post-item>
-    <app-post-item></app-post-item>
-    <app-post-item></app-post-item>
+    <!-- xochimilco 5-->
+    <app-post-item [imgURLs]="['/assets/xochil/2.jpg', '/assets/xochil/4.jpg']" ></app-post-item>
+    <app-post-item [imgURLs]="['/assets/xochil/5.jpg', '/assets/xochil/10.jpg']" ></app-post-item>
+    <app-post-item [imgURLs]="['/assets/xochil/12.jpg', '/assets/xochil/13.jpg']" ></app-post-item>
+
+    <!-- guadalajara 5-->
+    <app-post-item [imgURLs]="['/assets/guadalajara/16.jpg', '/assets/guadalajara/3.jpg']" ></app-post-item>
+    <app-post-item [imgURLs]="['/assets/guadalajara/5.jpg', '/assets/guadalajara/11.jpg']" ></app-post-item>
+    <app-post-item [imgURLs]="['/assets/guadalajara/2.jpg', '/assets/guadalajara/1.jpg']" ></app-post-item>
   </section>
   <section class="buttons">
     <button (click)="changeCreatePost()" >Comparte tu experiencia</button>

@@ -13,11 +13,7 @@
 
   <!-- lista -->
   <section class="container-mca lista-container">
-    <!-- <h2>Dispositivos conectados</h2> -->
     <div class="lista-items">
-      <!-- <app-item-mca *ngFor="let sensor of view_sensores" [sense]="sensor"></app-item-mca> -->
-      <!-- <app-item-mca routerLink="/visualizedata/view/2" routerLinkActive="active"></app-item-mca> -->
-      <!-- <button (click)="moreSensors()" >Mostrar Más</button> -->
     </div>
   </section>
 </main>
@@ -25,15 +21,6 @@
   <h2>Dispositivos conectados</h2>
   <div class="lista-items">
     <app-item-mca *ngFor="let sensor of view_sensores" [sense]="sensor"></app-item-mca>
-    <!-- <app-item-mca routerLink="/visualizedata/view/2" routerLinkActive="active"></app-item-mca> -->
     <button *ngIf="i < max_sensores" (click)="moreSensors()" >Mostrar Más</button>
   </div>
 </section>
-
-<!-- <section class="container frase">
-  <div>
-    <p>"Todo lo que hacemos, cada acción que tomamos es la producción de una estructura. Puedes ser consciente o no de las estructuras que reproducimos y puedes ser ignorante, ¡pero no eres inocente!"</p>
-    <br>
-    <p>--- Greene, septiembre de 2016</p>
-  </div>
-</section> -->

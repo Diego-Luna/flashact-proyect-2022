@@ -4,7 +4,8 @@
 
 h3{
   /* margin-bottom: 2%; */
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
+  font-size: 2.9vw;
   /* margin-bottom: 2%; */
 }
 
@@ -32,28 +33,32 @@ h3{
 /* filter: brightness(0.4); */
 
 .imagen-1{
-  background-image: url("/assets/test_8.jpeg");
+  /* background-image: url("/assets/test_8.jpeg"); */
+  background-image: url("/assets/seccion_1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position-x: -652px;
+  background-position: center;
   color: white;
   position:relative;
 }
 .imagen-2{
-  background-image: url("/assets/test_7.jpeg");
+  /* background-image: url("/assets/test_7.jpeg"); */
+  background-image: url("/assets/seccion_2_3_1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position-x: right;
   color: white;
 }
 .imagen-3{
-  background-image: url("/assets/test_9.jpeg");
+  /* background-image: url("/assets/test_9.jpeg"); */
+  background-image: url("/assets/seccion_3_1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position-x: -25vw;
   color: white;
-  background-position-x: -121px;
 }
 
 .color{
@@ -71,7 +76,8 @@ h3{
 }
 
 .frase div{
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: 2.2vw;
   padding: 0 20% 0 20%;
 }
 
@@ -90,14 +96,14 @@ h3{
   font-size: 3.5rem;
   width: 80%; */
 
-  font-size: 3.9rem;
+  font-size: 2.8vw;
   font-weight: bold;
   font-family: 'Mukta', sans-serif;
   width: 80%;
   height: 75px;
 }
 .text-info{
-  font-size: 1.4rem;
+  font-size: 1.4vw;
 }
 
 /* colaboraciones */
@@ -109,7 +115,7 @@ h3{
 .title-seccion{
   text-align: center;
   color: white;
-  font-size: 2.5rem;
+  font-size: 3vw;
   width: 60%;
   margin: auto;
 }
@@ -119,6 +125,7 @@ h3{
   height: 90%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 /* proseso */
@@ -171,10 +178,10 @@ img{
 }
 
 .pro-title{
-  font-size: 2.3rem;
+  font-size: 2.3vw;
 }
 .pro-text{
-  font-size: 1.45rem;
+  font-size: 1.45vw;
 }
 
 .pro-title,
@@ -182,4 +189,111 @@ img{
   width: 85%;
   color: white;
   text-align: center;
+}
+
+.img-class-art{
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+@media (max-width: 1024px) {
+  .colaboraciones-container{
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+  .lista-colaboraciones{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 525px) {
+
+  .colaboraciones-container{
+    margin-top: 9vh;
+  }
+
+  .title-seccion{
+    font-size: 6vw;
+  }
+
+  .text-info{
+    font-size: 4vw;
+  }
+  .seccion-grande h3{
+    font-size: 6vw;
+  }
+  .frase div{
+    font-size: 3.4vw;
+  }
+
+  .proseso{
+    margin-top: 6vh;
+  }
+  .proceso-container{
+    /* width: 42vw; */
+    /* height: 40vw; */
+    width: 62vw;
+    height: 62vw;
+    margin-bottom: 2vh;
+  }
+
+  .pro-title{
+    font-size: 3.5vw;
+  }
+  .pro-text{
+    font-size: 2.45vw;
+  }
+  .container-grandes{
+    flex-direction: column;
+    height: auto;
+  }
+
+  .flex-reverse{
+    flex-direction: column-reverse;
+  }
+
+  .seccion-grande{
+    width: 100%;
+    height: auto;
+    margin-top: 10vh;
+  }
+
+  .imagen-1,
+  .imagen-2,
+  .imagen-3{
+    height: 30vh;
+    background-size: cover;
+  }
+
+  .filtro h3{
+    height: auto;
+    font-size: 8vw;
+  }
+
+  .pro-text{
+    font-size: 4vw;
+  }
+  .pro-title {
+    font-size: 5vw;
+  }
+
+  .imagen-3,
+  .imagen-2,
+  .imagen-1{
+    background-image: url("/assets/seccion_1.jpg");
+    background-attachment: scroll;
+  }
+  .imagen-2{
+    background-image: url("/assets/Phone2.jpg");
+    background-position-x: -66vw;
+  }
+  .imagen-3{
+    background-image: url("/assets/Phone3.jpg");
+    background-position-x: -13vw;
+  }
 }

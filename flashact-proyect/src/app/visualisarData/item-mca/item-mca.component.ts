@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SenseItem } from 'src/app/models/reqres-response';
 
-import { Color, ScaleType } from '@swimlane/ngx-charts';
+import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
+import { Color, LegendPosition, ScaleType } from '@swimlane/ngx-charts';
 import { HttpSensorsService } from 'src/app/http-sensors.service';
 
 import {GoogleMapsModule} from '@angular/google-maps';
@@ -318,6 +319,7 @@ export class ItemMcaComponent implements OnInit {
   big_xAxisLabel: string = 'time';
   big_yAxisLabel: string = 'PH';
   big_timeline: boolean = true;
+  LegendPosition: LegendPosition = LegendPosition.Right;
 
   colorScheme_ph: Color = {
     name: 'myScheme',
@@ -352,7 +354,7 @@ export class ItemMcaComponent implements OnInit {
     domain: ['#21d59b', '#9cebca'],
   };
 
-  constructor(private httpSensorsService: HttpSensorsService) {
+  constructor(private httpSensorsService: HttpSensorsService, public breakpointObserver: BreakpointObserver) {
   }
 
 
@@ -387,6 +389,18 @@ export class ItemMcaComponent implements OnInit {
 
     this.yScaleMin = 0;
     this.yScaleMax = 14;
+
+    this.breakpointObserver
+      .observe(['(max-width: 600px)'])
+      .subscribe((state: BreakpointState) => {
+        if (state.matches) {
+          this.LegendPosition = LegendPosition.Below;
+          this.big_showYAxisLabel = false;
+        } else {
+          this.LegendPosition = LegendPosition.Right;
+          this.big_showYAxisLabel = true;
+        }
+      });
 
   }
 
@@ -448,7 +462,6 @@ export class ItemMcaComponent implements OnInit {
 
     // console.log(`CLick : ${sense}`);
   }
-
 
   onSelect(event: any): void {
     // console.log(event);

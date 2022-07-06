@@ -125,11 +125,12 @@
       </div>
     </div>
     <div class="grafic-sense">
-      <figure class="data-time" #containerRef>
+      <figure class="data-time"  id="containerRef" #containerRef >
         <ngx-charts-line-chart
             [view]="[containerRef.offsetWidth, containerRef.offsetHeight]"
             [legend]="big_legend"
             [scheme]="colorScheme_big"
+            [legendPosition]="LegendPosition"
             [showXAxisLabel]="big_showXAxisLabel"
             [showYAxisLabel]="big_showYAxisLabel"
             [xAxis]="big_xAxis"
@@ -146,10 +147,12 @@
       </figure>
 
       <!-- <a class="button-container" routerLink="/visualizedata/view/1" routerLinkActive="active"> -->
-      <a class="button-container" routerLink="/visualizedata/view/{{sense.name}}" routerLinkActive="active">
+      <!-- <a class="button-container" routerLink="/visualizedata/view/{{sense.name}}" routerLinkActive="active">
         <img src="./assets/item-mca/botton.svg" alt="botton">
-      </a>
-
+      </a> -->
     </div>
   </div>
+  <p class="button-representacion" routerLink="/visualizedata/view/{{sense.name}}" routerLinkActive="active">
+    Representación artística
+  </p>
 </div>

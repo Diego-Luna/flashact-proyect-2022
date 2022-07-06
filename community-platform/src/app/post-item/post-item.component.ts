@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-post-item',
@@ -7,9 +7,50 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostItemComponent implements OnInit {
 
+  @Input() imgURLs: string[] =  [
+    "/assets/xochil/1.jpg",
+    "/assets/xochil/2.jpg"
+  ];
+
+  imgURL: string | any;
+  counter_imgs:number = 2;
+  counter:number = 1;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.counter_imgs = this.imgURLs.length;
+    this.imgURL = this.imgURLs[0];
   }
+
+  changeImgs(operacion: string){
+
+    switch (operacion) {
+      case "+":
+        if (this.counter >= this.counter_imgs)
+        {
+          this.counter = 1;
+        }else{
+          this.counter++
+        }
+        break;
+      case "-":
+        if (this.counter - 1 <= 0)
+        {
+          this.counter = this.counter_imgs;
+        }else{
+          this.counter--
+        }
+        break;
+      default:
+        break;
+    }
+    this.changeImg(this.counter);
+  }
+
+  changeImg(posicion:number){
+    this.imgURL = this.imgURLs[posicion - 1];
+  }
+
 
 }

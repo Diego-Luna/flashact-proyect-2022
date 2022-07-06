@@ -8,10 +8,11 @@ img{
   margin-top: 60px;
   /* height: 1181px; */
   height: auto;
-  width: calc(100% - 2(45px));
+  /* width: calc(100% - 2(45px)); */
+  width: calc(100% - 90px);
   padding: 45px;
   border: none;
-  border-radius: 40px;
+  border-radius: 20px;
   background-color: white;
 }
 
@@ -42,6 +43,7 @@ img{
   align-items: baseline;
   justify-content: center;
   flex-direction: column;
+  text-align: left;
 }
 .button-container{
   /* position:absolute;
@@ -56,6 +58,7 @@ img{
 /* sensores */
 .item-sensores-container{
   height: 60%;
+  margin-bottom: 5vh;
 }
 .all-sense{
   margin-top: 30px;
@@ -78,7 +81,7 @@ img{
   cursor: pointer;
 }
 .sensor:hover{
-  box-shadow: 0px 2px 4px #888888;
+  box-shadow: 0 0px 7px #888888;
 }
 .sensor h4{
   text-align: left;
@@ -96,7 +99,7 @@ img{
 .grafica{
   margin-top: 5%;
   width: 45%;
-  /* height: 95%; */
+  height: 100%;
   max-height: 65px;
 }
 
@@ -111,7 +114,7 @@ img{
   border-radius: 6px;
   background-color: white;
   box-shadow: 0px 1px 2px #a1a1a1;
-  position: relative;
+  /* position: relative; */
 }
 .grafic-sense h4{
   margin-top: 10px;
@@ -124,4 +127,157 @@ img{
   width: 100%;
   height: 50vh;
   max-height: 600px;
+}
+
+.button-representacion{
+  width: 35vw;
+  height: 20vw;
+  min-width: 100px;
+  min-height: 20px;
+  max-width: 400px;
+  max-height: 80px;
+  margin: auto;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 3vw;
+  text-decoration: none;
+  font-size: 1.35vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  p{
+    font-size: 1.5vw;
+  }
+  .sensor h4{
+    font-size: 1.6vw;
+  }
+  .sensor h3{
+    font-size: 2vw;
+  }
+
+  .item-info-container {
+    height: 20vh;
+    min-height: 100px;
+  }
+  .all-sense{
+    height: 10vh;
+    min-height: 100px;
+  }
+
+
+  .item-container{
+    width: calc(90vw - 8vw);
+    padding: 4vw;
+    margin: auto;
+    margin-top: 60px;
+  }
+  .info-container {
+    height: calc(100% - 80px);
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  h2{
+    font-size: 3.2vw;
+  }
+  p{
+    font-size: 2vw;
+  }
+  .sensor h4{
+    font-size: 2.6vw;
+  }
+  .sensor h3{
+    font-size: 3vw;
+  }
+
+  .all-sense{
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-evenly;
+  }
+  .grafic-sense{
+    padding: 5% 0 0 0;
+    width: 100%;
+    height: 60vh;
+    min-height: 700px;
+  }
+
+  .sensor{
+    width: 45%;
+    height: 10vh;
+    max-height: 200px;
+    margin-bottom: 2vh;
+  }
+  .data-time {
+    width: 100%;
+    height: 100%;
+  }
+
+  .button-container{
+    position: absolute;
+    right: 2%;
+    top: calc(50% - 40px);
+    width: 10vw;
+    height: 10vw;
+  }
+  .button-representacion{
+    font-size: 3vw;
+    width: 45vw;
+    height: 10vw;
+    border-radius: 4vw;
+  }
+}
+
+@media (max-width: 434px) {
+
+  .sensor h4{
+    font-size: 3.2vw;
+  }
+  .sensor h3{
+    font-size: 4vw;
+  }
+  p{
+    font-size: 3.5vw;
+  }
+
+  .item-container{
+    width: calc(90vw - 8vw);
+    padding: 4vw;
+    border-radius: 5px;
+  }
+  .item-info-container{
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+  }
+  .all-sense{
+    justify-content: space-between;
+  }
+
+  .two{
+    height: 15vh;
+    width: 100%;
+  }
+  .two.info-container{
+    width: calc(100% - 6vw);
+    padding: 3vw;
+    margin-top: 3vw;
+    align-items: center;
+  }
+  .sensor{
+    width: 41%;
+  }
+  .grafic-sense{
+    margin-top: 2vh;
+  }
+
+  .button-container{
+    top: 0;
+    left: calc(50% - 5vw);
+  }
 }

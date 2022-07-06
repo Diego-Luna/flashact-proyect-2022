@@ -28,11 +28,12 @@
   <!-- img -->
   <div class="img-secction">
     <figure class="img-container all">
-      <img src="./assets/item/img_1.svg" alt="">
+      <!-- <img src="./assets/item/img_1.svg" alt=""> -->
+      <img src={{imgURL}} alt="">
     </figure>
     <div class="buttons-container">
-      <button class="space-right"><img src="./assets/arrows/left.svg" alt=""></button>
-      <button><img src="./assets/arrows/right.svg" alt=""></button>
+      <button (click)="changeImgs('-')"  class="space-right"><img src="./assets/arrows/left.svg" alt=""></button>
+      <button (click)="changeImgs('+')" ><img src="./assets/arrows/right.svg" alt=""></button>
     </div>
   </div>
 </div>

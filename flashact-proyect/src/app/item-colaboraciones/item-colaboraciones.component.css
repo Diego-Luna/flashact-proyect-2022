@@ -9,7 +9,8 @@ img{
   margin-top: 20%;
   width: calc(22vw - 84px);
   height: calc(80% - 84px);
-  padding: 42px;
+  /* padding: 42px; */
+  padding: 3vw;
   border: none;
   text-align: center;
   border-radius: 40px;
@@ -59,9 +60,16 @@ img{
   text-align: center;
 }
 
+p{
+  font-size: 1vw;
+}
+h4{
+  font-size: 1.2vw;
+}
+
 /* Button */
 button{
-  height: calc(15% - 20px);
+  height: calc(20% - 20px);
   width: calc(80% - 20px);
   padding: 10px;
   margin-top: 5%;
@@ -69,6 +77,51 @@ button{
   color: white;
   border: none;
   border-radius: 36px;
-  font-size: 1.1rem;
+  font-size: 1.1vw;
   font-weight: normal;
+}
+
+
+@media (max-width: 1024px) {
+
+  p{
+    font-size: 1.8vw;
+  }
+  h4{
+    font-size: 2vw;
+  }
+
+  .item-container{
+    width: calc(40vw - 5vw);
+    height: 50vh;
+  }
+}
+
+@media (max-width: 525px) {
+  .item-container{
+    width: calc(65vw - 5vw);
+    height: calc(40vh - 5vw);
+    padding: 6vw;
+  }
+  h4{
+    font-size: 2.8vw;
+  }
+  p{
+    font-size: 2.8vw;
+  }
+  button{
+    font-size: 2.2vw;
+    width: 35vw;
+    min-width: 80px;
+  }
+
+  .nombre {
+    bottom: 20px;
+  }
+
+  .filtro,
+  img{
+    border-radius: 20px;
+  }
+
 }
