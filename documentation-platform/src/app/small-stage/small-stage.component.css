@@ -49,7 +49,8 @@ img{
 
 @media (max-width: 800px) {
   .stage-small{
-    height: 12vw;
+    height: 20vw;
+    justify-content: flex-end;
   }
 
   img{
@@ -58,7 +59,22 @@ img{
 }
 
 @media (max-width: 600px) {
+
+  .stage-small{
+    height: 17vw;
+    width: calc(100% - 4vw);
+    justify-content: flex-start;
+    border-radius: 10px;
+  }
+
   .img-container{
-    top: 2vw;
+    right: 0;
+    top: 0;
+    width: 36vw;
+    height: 21vw;
+  }
+  img{
+    box-shadow: -2px 2px 5px rgb(0 0 0 / 20%);
+    border-radius: 0;
   }
 }
