@@ -48,6 +48,8 @@ img{
 .opinion{
   width: 95%;
   height: 40%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 /* sona gris */
@@ -99,6 +101,10 @@ button{
 
 .space-right{
   margin-right: 10px;
+}
+
+.circle img{
+  border-radius: 100%;
 }
 
 @media (max-width: 1024px) {

@@ -11,6 +11,11 @@ export class PostItemComponent implements OnInit {
     "/assets/xochil/1.jpg",
     "/assets/xochil/2.jpg"
   ];
+  @Input() OpinionExperiencia: string = "";
+  @Input() Nombre: string = "";
+  @Input() InstitucionComunidad: string = "";
+  @Input() Nombre_sonda: string = "";
+  @Input() IMG_user: string = "";
 
   imgURL: string | any;
   counter_imgs:number = 2;

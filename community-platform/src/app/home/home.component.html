@@ -1,14 +1,54 @@
 <section class="container">
   <section class="list">
     <!-- xochimilco 5-->
-    <app-post-item [imgURLs]="['/assets/xochil/2.jpg', '/assets/xochil/4.jpg']" ></app-post-item>
-    <app-post-item [imgURLs]="['/assets/xochil/5.jpg', '/assets/xochil/10.jpg']" ></app-post-item>
-    <app-post-item [imgURLs]="['/assets/xochil/12.jpg', '/assets/xochil/13.jpg']" ></app-post-item>
+    <app-post-item
+      [imgURLs]="['/assets/xochil/2.jpg', '/assets/xochil/4.jpg']"
+      [OpinionExperiencia]="'La comunidad propone el rescate socioambiental de la zona lacustre de Xochimilco. En efecto, la zona lacustre sufre problemáticas derivadas de la urbanización así como la contaminación de las aguas de los canales, su mal uso, entre otros. Dichas problemáticas tienen consecuencias en el ámbito social tales como falta de educación cívica; criminalidad; pobreza etc: Se trabajarán diferentes ejes (culturales, científicos, artísticos).'"
+      [Nombre]="'Pierre-Louis Gorry'"
+      [InstitucionComunidad]="'Laboratorio_sembrarte'"
+      [Nombre_sonda]="'Chililico'"
+      [IMG_user]="'/assets/comunidades/pilou.jpg'"
+    ></app-post-item>
+    <app-post-item
+      [imgURLs]="['/assets/xochil/5.jpg', '/assets/xochil/10.jpg']"
+      [OpinionExperiencia]="'En especial xochimilco, que tiene que ver con la contaminación del medio ambiente, la urbanización que nos es un tema contemporáneo, la contaminación del agua. Es importante tener una medición continua del suelo, de los factores bióticos, abióticos. Es fundamental para el quehacer del chinampero'"
+      [Nombre]="'Isaias'"
+      [InstitucionComunidad]="'Laboratorio_sembrarte'"
+      [Nombre_sonda]="'Chililico'"
+      [IMG_user]="'/assets/comunidades/Isaias.png'"
+    ></app-post-item>
+    <!-- Nos diero estas herramientas, que podra determinar una problematica que existe y que nos coresponde a las comunidades y a la gente que vive aqui que vamos a hacer cone sa herramienta y con essos datos y para haora asi poner algunas soluciones -->
+    <app-post-item
+      [imgURLs]="['/assets/xochil/12.jpg', '/assets/xochil/13.jpg']"
+      [OpinionExperiencia]="'Uno como parte de alguna comunidad o de algún lugar, conoce ciertos problemáticas, ciertas prácticas que incluso uno mismo cae en ellas y que van deteriorando el sistema ecológico y sustentable, principalmente esta zona'"
+      [Nombre]="'Sara'"
+      [InstitucionComunidad]="'Laboratorio_sembrarte'"
+      [Nombre_sonda]="'Chililico'"
+      [IMG_user]="'/assets/comunidades/Sara.png'"
+    ></app-post-item>
 
     <!-- guadalajara 5-->
-    <app-post-item [imgURLs]="['/assets/guadalajara/16.jpg', '/assets/guadalajara/3.jpg']" ></app-post-item>
-    <app-post-item [imgURLs]="['/assets/guadalajara/5.jpg', '/assets/guadalajara/11.jpg']" ></app-post-item>
-    <app-post-item [imgURLs]="['/assets/guadalajara/2.jpg', '/assets/guadalajara/1.jpg']" ></app-post-item>
+    <app-post-item
+      [imgURLs]="['/assets/guadalajara/16.jpg', '/assets/guadalajara/3.jpg']"
+      [OpinionExperiencia]="'hola'"
+      [Nombre]="'Diego Luna'"
+      [InstitucionComunidad]="'Casa_Blanca'"
+      [Nombre_sonda]="'purificadora_de_agua_1'"
+    ></app-post-item>
+    <app-post-item
+      [imgURLs]="['/assets/guadalajara/5.jpg', '/assets/guadalajara/11.jpg']"
+      [OpinionExperiencia]="'hola'"
+      [Nombre]="'Diego Luna'"
+      [InstitucionComunidad]="'Casa_Blanca'"
+      [Nombre_sonda]="'purificadora_de_agua_1'"
+    ></app-post-item>
+    <app-post-item
+      [imgURLs]="['/assets/guadalajara/2.jpg', '/assets/guadalajara/1.jpg']"
+      [OpinionExperiencia]="'hola'"
+      [Nombre]="'Diego Luna'"
+      [InstitucionComunidad]="'Casa_Blanca'"
+      [Nombre_sonda]="'purificadora_de_agua_2'"
+    ></app-post-item>
   </section>
   <section class="buttons">
     <button (click)="changeCreatePost()" >Comparte tu experiencia</button>
