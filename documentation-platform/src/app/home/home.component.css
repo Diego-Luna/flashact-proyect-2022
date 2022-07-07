@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 60px;
+  margin-bottom: 6vw;
 }
 
 .etapa-b{
@@ -337,11 +337,11 @@ img{
 
 .ubicacion-list{
   margin-left: 2vw;
-  width: calc(100% - 2vw);
+  width: 100%;
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   /* justify-content: space-between; */
 }
 
@@ -352,14 +352,18 @@ img{
   justify-content: center;
 }
 
-.white-small{
-  width: 9vw;
-  height: 9vw;
+.white-small {
+  width: 18vw;
+  height: 18vw;
 }
 .ubicacion-item pre,
 .ubicacion-item p{
   margin: 0;
   width: auto;
+}
+
+.ubicacion-item{
+  margin-top: 2vw;
 }
 
 
@@ -429,8 +433,8 @@ img{
   }
 
   .white-small{
-    width: 15vw;
-    height: 15vw;
+    width: 25vw;
+    height: 25vw;
   }
   .examples{
     margin-top: 10vw;
@@ -497,8 +501,8 @@ img{
   }
 
   .white-small{
-    width: 25vw;
-    height: 25vw;
+    width: 35vw;
+    height: 35vw;
   }
   .info-seccion-armado h4 {
     font-size: 5vw;

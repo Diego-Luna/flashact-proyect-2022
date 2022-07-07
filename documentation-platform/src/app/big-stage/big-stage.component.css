@@ -28,12 +28,14 @@ h3{
 .img-container{
   position: absolute;
   /* top: -110px; */
-  top: -5.6vw;
-  right: 30px;
+  top: -4.8vw;
+  right: 5px;
   /* width: 200px;
   height: 200px; */
-  width: 11vw;
-  height: 11vw;
+  width: 9vw;
+  height: 9vw;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 img{
@@ -43,7 +45,7 @@ img{
   object-fit: cover;
   border: none;
   /* border-radius: 40px; */
-  border-radius: 2.4vw;
+  border-radius: 1.2vw;
   box-shadow: -10px 20px 10px rgb(0, 0, 0, 20%);
 }
 
