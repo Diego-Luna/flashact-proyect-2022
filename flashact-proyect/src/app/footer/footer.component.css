@@ -6,11 +6,13 @@ p{
 }
 footer{
   margin-top: 150px;
-  height: 50vh;
+  /* height: 50vh; */
+  height: auto;
   width: 80%;
   background-image: linear-gradient(black, #055D94);
   padding-left: 10%;
   padding-right: 10%;
+  padding-bottom: 5%;
   /* display: flex; */
 }
 

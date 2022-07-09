@@ -7,21 +7,23 @@
   <section class="info">
     <div class="artista-container two">
       <figure class="artista-img">
-        <img src="./assets/inside-mca/user.svg" alt="artista">
+        <img src={{artistas[position].ArtistaImg}} alt="artista">
       </figure>
       <div>
-        <p>Mark Einst</p>
-        <b>Social media</b>
+        <p>{{artistas[position].ArtistaNombre}}</p>
+        <!-- <b>Social media</b> -->
       </div>
     </div>
     <div class="two dispositivo-info">
-      <p><b>Institución o comunidad:</b> El salto</p>
-      <p><b>Nombre:</b> sonda 1</p>
+      <p><b>Institución o comunidad:</b>{{artistas[position].InstitucionComunidad}}</p>
+      <p><b>Nombre:</b>{{artistas[position].Nombre}}</p>
     </div>
   </section>
   <section class="arte">
     <figure class="arte-container">
-      <img src="./assets/inside-mca/videos.png" alt="artista">
+      <!-- <img src="./assets/inside-mca/videos.png" alt="artista"> -->
+      <iframe *ngIf="artistas[position].ArtistaNombre === 'Diego Martínez Guillén'" src="https://www.youtube.com/embed/_EQDzlNA8Yc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe *ngIf="artistas[position].ArtistaNombre === 'Camila Luna'" src="https://www.youtube.com/embed/A5CCs6A6wRc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </figure>
   </section>
 </main>

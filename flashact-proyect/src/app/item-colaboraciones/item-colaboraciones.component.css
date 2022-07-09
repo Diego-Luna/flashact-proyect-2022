@@ -58,6 +58,8 @@ img{
   width: 100%;
   height: 25%;
   text-align: center;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 p{
@@ -79,6 +81,7 @@ button{
   border-radius: 36px;
   font-size: 1.1vw;
   font-weight: normal;
+  cursor: pointer;
 }
 
 
@@ -124,4 +127,10 @@ button{
     border-radius: 20px;
   }
 
+}
+
+@media (max-height: 500px) {
+  .item-container{
+    height: 50vw;
+  }
 }

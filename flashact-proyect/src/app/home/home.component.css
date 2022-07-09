@@ -76,9 +76,8 @@ h3{
 }
 
 .frase div{
-  /* font-size: 2rem; */
   font-size: 2.2vw;
-  padding: 0 20% 0 20%;
+  padding: 0 15% 0 15%;
 }
 
 /* filtro */
@@ -196,6 +195,14 @@ img{
   border-radius: 40px;
 }
 
+.frase p{
+  /* font-size: 1.9vw; */
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 40vh;
+  width: 100%;
+}
+
 @media (max-width: 1024px) {
   .colaboraciones-container{
     width: 100%;
@@ -290,10 +297,25 @@ img{
   }
   .imagen-2{
     background-image: url("/assets/Phone2.jpg");
-    background-position-x: -66vw;
+    background-position-x: -30vw;
   }
   .imagen-3{
     background-image: url("/assets/Phone3.jpg");
     background-position-x: -13vw;
+  }
+
+  .frase div h3{
+    font-size: 4.2vw;
+  }
+  .frase div {
+    font-size: 4vw;
+    padding: 0 15% 0 15%;
+  }
+  
+}
+
+@media (max-width: 425px) {
+  .imagen-2{
+    background-position-x: -66vw;
   }
 }

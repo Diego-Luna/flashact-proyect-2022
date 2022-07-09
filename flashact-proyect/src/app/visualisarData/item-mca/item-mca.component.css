@@ -281,3 +281,12 @@ img{
     left: calc(50% - 5vw);
   }
 }
+
+@media (max-height: 500px) {
+  .sensor {
+    height: 10vw;
+  }
+  .grafic-sense{
+    min-height: 450px;
+  }
+}

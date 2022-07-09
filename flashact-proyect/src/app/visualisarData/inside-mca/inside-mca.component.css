@@ -1,12 +1,18 @@
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 main{
-  width: calc(80vw - 160px);
-  height: calc(80vh - 160px);
+  width: calc(80vw - 10vw);
+  height: calc(80vw - 10vw);
   margin: auto;
-  padding: 80px;
+  padding: 5vw;
   background-color: white;
   border: none;
-  border-radius: 36px;
-  margin-top: 10vh;
+  border-radius: 2.5vw;
+  margin-top: 12.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,6 +37,7 @@ button{
 }
 button img{
   margin-right: 20px;
+  object-fit: contain;
 }
 
 /* info */
@@ -57,13 +64,23 @@ button img{
 .artista-container div{
   margin-left: 10%;
 }
+.artista-img{
+  width: 10vw;
+  max-width: 80px;
+}
 
+.artista-img img{
+  border-radius: 100%;
+}
 /* info dispositivo */
 .dispositivo-info{
   flex-direction: column;
+  align-items: flex-start;
 }
 .dispositivo-info p{
-  width: 60%;
+  /* width: 90%; */
+  text-align: left;
+  margin-left: 5%;
 }
 
 /* arte */
@@ -77,8 +94,77 @@ button img{
   width: 100%;
   height: 100%;
 }
-.arte-container img{
+.arte-container img,
+.arte-container iframe{
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+  main{
+    width: calc(91vw - 6vw);
+    height: auto;
+    padding: 3vw;
+    min-height: 500px;
+  }
+  p{
+    font-size: 2vw;
+  }
+
+  .to-return{
+    font-size: 2.5vw;
+  }
+  button img{
+    height: 3vw;
+  }
+  .two{
+    width: 49%;
+  }
+
+  .info{
+    flex-direction: column;
+    height: auto;
+  }
+
+
+  .dispositivo-info p{
+    padding: 0;
+    margin: 0;
+  }
+  .dispositivo-info{
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .two{
+    width: 100%;
+    height: 20vw;
+    min-height: 80px;
+    max-height: 200px;
+    margin-bottom: 5vw;
+  }
+
+  .arte{
+    margin: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .to-return,
+  p{
+    font-size: 4vw;
+  }
+
+  main{
+    margin-top: 25vw;
+  }
+
+  .two{
+    height: 30vw;
+  }
+
+  button img {
+    height: 4vw;
+  }
 }

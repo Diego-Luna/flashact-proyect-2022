@@ -8,7 +8,7 @@ import { VisualizarDatosComponent } from './visualisarData/visualizar-datos/visu
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'visualizedata', component: VisualizarDatosComponent },
-  { path: 'visualizedata/art/1', component: InsideMcaComponent },
+  { path: 'visualizedata/art/:id', component: InsideMcaComponent },
   { path: 'visualizedata/view/:id', component: InsideMcaMachineComponent },
   // { path: 'visualizedata/view/2', component: InsideMcaMachineComponent },
   { path: '**', component: HomeComponent }

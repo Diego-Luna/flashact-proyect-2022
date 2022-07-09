@@ -1,13 +1,14 @@
 <section class="item-container">
   <div class="artista-container">
     <figure class="img-container">
-      <img src="./assets/artista.svg" alt="Artistica">
+      <!-- <img src="./assets/artista.svg" alt="Artistica"> -->
+      <img src={{ArtistaImg}} alt="Artistica">
     </figure>
     <div class="filtro"></div>
-    <p class="obra">Tipo de obra</p>
-    <h4 class="nombre">Nombre del artista</h4>
+    <p class="obra">{{TipoObra}}</p>
+    <h4 class="nombre">{{ArtistaNombre}}</h4>
   </div>
-  <p class="descripcion">Descripción</p>
-  <button routerLink="/visualizedata/art/1" routerLinkActive="active">Representación
+  <p class="descripcion">{{ArtistaDescripcion}}</p>
+  <button routerLink='{{ArtistaLink}}' routerLinkActive="active">Representación
     Artistica</button>
 </section>
