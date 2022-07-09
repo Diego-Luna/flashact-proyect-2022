@@ -51,3 +51,9 @@
     font-size: 4vw;
   }
 }
+
+@media (max-height: 500px) {
+  .container{
+    width: 90vw;
+  }
+}
