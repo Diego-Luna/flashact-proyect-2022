@@ -51,7 +51,7 @@ img{
 
 @media (max-width: 800px) {
   .stage-small{
-    height: 20vw;
+    height: 12vw;
     justify-content: flex-end;
   }
 

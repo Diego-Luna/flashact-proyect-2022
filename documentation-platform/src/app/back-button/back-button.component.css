@@ -25,5 +25,11 @@ a{
     height: 55px;
     top: 90vh;
     left: 80vw;
+  }
 }
+@media (max-height: 600px) {
+  button {
+    top: 81vh;
+    left: 88vw;
+  }
 }
