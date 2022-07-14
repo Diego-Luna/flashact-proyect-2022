@@ -4,6 +4,10 @@ import { Router } from '@angular/router';
 import { HttpSensorsService } from 'src/app/http-sensors.service';
 import { SenseItem } from 'src/app/models/reqres-response';
 
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+
 @Component({
   selector: 'app-inside-mca-machine',
   templateUrl: './inside-mca-machine.component.html',
@@ -11,10 +15,13 @@ import { SenseItem } from 'src/app/models/reqres-response';
 })
 export class InsideMcaMachineComponent implements OnInit {
 
+  heroes:any;
+  selectedId = 0;
+
   url: string = "";
   sense: SenseItem | any;
 
-  constructor(private _location: Location, private router: Router, private httpSensorsService: HttpSensorsService) {}
+  constructor(private _location: Location, private router: Router,  private route: ActivatedRoute, private httpSensorsService: HttpSensorsService) {}
 
   ngOnInit(): void {
     this.url = `${this.router.parseUrl(this.router.url)}`;
@@ -28,7 +35,7 @@ export class InsideMcaMachineComponent implements OnInit {
 
       this.sense = resp;
 
-      console.log(this.sense.temperature[0].series[this.sense.temperature[0].series.length - 1].value);
+      console.log(this.sense.comunity_or_institution);
     });;
   }
 
@@ -46,11 +53,11 @@ export class InsideMcaMachineComponent implements OnInit {
 
     console.log(`values ph : ${value}`);
 
-    if (value >= 7.99 ){
+    if (value > 8.50 ){
       // console.log((`1: ${object.velocidad - value}s`));
       return (`${object.velocidad - value}s`);
     }
-    else if (value <= 7.00){
+    else if (value < 6.50){
       // console.log(`2: ${object.velocidad + value}s`);
       return (`${object.velocidad + value}s`);
     }
@@ -68,14 +75,14 @@ export class InsideMcaMachineComponent implements OnInit {
     console.log(`values tem: ${value}`);
 
     if (value >= 35.01 ){
-      console.log((`tem 1: ${object.velocidad - value}s`));
+      // console.log((`tem 1: ${object.velocidad - value}s`));
       return (`${object.velocidad - value}s`);
     }
     else if (value <= 29.99){
-      console.log(`tem 2: ${object.velocidad + value}s`);
+      // console.log(`tem 2: ${object.velocidad + value}s`);
       return (`${object.velocidad + value}s`);
     }
-    console.log(`tem 3: ${object.velocidad}s`);
+    // console.log(`tem 3: ${object.velocidad}s`);
     return (`${object.velocidad}s`);
   }
   returnTur(){
@@ -87,11 +94,11 @@ export class InsideMcaMachineComponent implements OnInit {
 
     console.log(`values tur: ${value}`);
 
-    if (value <= 4.00 ){
-      console.log((`tur 1: ${object.velocidad - value}s`));
+    if (value > 3.00 ){
+      // console.log((`tur 1: ${object.velocidad - value}s`));
       return (`${object.velocidad - value}s`);
     }
-    console.log(`tur 3: ${object.velocidad}s`);
+    // console.log(`tur 3: ${object.velocidad}s`);
     return (`${object.velocidad}s`);
   }
   returnTDS(){
@@ -103,15 +110,15 @@ export class InsideMcaMachineComponent implements OnInit {
 
     console.log(`values tds: ${value}`);
 
-    if (value >= 310.01 ){
+    if (value > 300 ){
       console.log((`tds 1: ${value - object.velocidad}s`));
       return (`${object.velocidad - value}s`);
     }
-    else if (value <= 299.99){
-      console.log(`tds 2: ${(value)/2 - object.velocidad}s`);
-      return (`${object.velocidad + value}s`);
-    }
-    console.log(`tds 3: ${object.velocidad}s`);
+    // else if (value <= 299.99){
+    //   console.log(`tds 2: ${(value)/2 - object.velocidad}s`);
+    //   return (`${object.velocidad + value}s`);
+    // }
+    // console.log(`tds 3: ${object.velocidad}s`);
     return (`${object.velocidad}s`);
   }
 }

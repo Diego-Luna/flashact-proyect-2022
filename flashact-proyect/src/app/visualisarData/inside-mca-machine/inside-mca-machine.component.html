@@ -1,4 +1,4 @@
-<main>
+<main id="start">
   <button class="to-return" routerLink="/visualizedata" routerLinkActive="active">
     <img src="./assets/inside-mca/button-left.svg" alt="">
     Regresar
@@ -6,7 +6,7 @@
   <section class="info">
     <div class="two dispositivo-info">
       <p><b>Institución o comunidad:</b>{{sense.comunity_or_institution}}</p>
-      <p><b>Nombre:</b> {{sense.name}}</p>
+      <p><b>Nombre:</b> {{sense.name!}}</p>
     </div>
   </section>
   <section class="arte">
